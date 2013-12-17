@@ -1,0 +1,50 @@
+@import compass/css3/images
+@import compass/css3/border-radius
+@import compass/css3/user-interface
+
+#notification
+  position: relative
+  margin: 0 -1px
+  color: #899d2c
+  text-align: center
+  height: 44px
+  border-bottom: 1px solid #899d2c
+  padding: 0
+  z-index: 2
+  +border-radius(0)
+  +user-select(none)
+  &.alert-info
+    background: #e8edc8
+    border: 1px solid #899d2c
+  &.alert-error
+    color: #fc4a4a
+    background: #fbcfd0
+    border: 1px solid #fc9292
+    .icon-remove
+      color: #fc4a4a
+  &.alert-success
+    border: 1px solid #899d2c
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    bottom: 0
+    left: -5px
+    width: 5px
+    +background-image(linear-gradient(left, rgba(black, 0), rgba(black, 0.2)))
+  p
+    padding: 13px
+    margin: 0
+    font-size: 0.9em
+  .icon-remove
+    color: #899D2C
+    position: absolute
+    right: 15px
+    top: 15px
+  body.settings &
+    &:after
+      width: 0
+
+body.public_integration #notification
+  &:after
+    +background-image(none)

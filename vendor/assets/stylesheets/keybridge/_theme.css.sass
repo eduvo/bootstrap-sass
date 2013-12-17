@@ -1,0 +1,30 @@
+
+//======================
+// Default text Color Scheme
+//======================
+$baseTextColor    : #769ad1
+$darkenTextColor  : #5579b2
+$lightenTextColor : #a7bedb
+$sumTextColor     : #3284eb
+
+$darkenBorder     :#bdcfe5
+
+@mixin animation($name, $duration, $ease, $delay, $direction)
+  -webkit-animation: $name $duration $ease $delay $direction
+  -moz-animation: $name $duration $ease $delay $direction
+  -o-animation: $name $duration $ease $delay $direction
+  -ms-animation: $name $duration $ease $delay $direction
+  animation: $name $duration $ease $delay $direction
+
+@mixin keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-o-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+

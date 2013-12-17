@@ -1,0 +1,49 @@
+@import compass/css3/transition
+@import compass/css3/border-radius
+@import compass/css3/box-shadow
+@import compass/css3/user-interface
+
+#dashboard-left-sidebar
+  +user-select(none)
+  border-left: 1px solid #d2d8e2
+
+.grid-main
+  border: 1px solid #d2d8e2
+  border-top: none
+  box-shadow: 0 0 5px #dde4ee
+
+.grid-primary
+  border-bottom-right-radius: 5px
+
+#bd
+  #title-bar
+    +user-select(none)
+
+#hd
+  +user-select(none)
+
+.grid-stage
+  min-height: 500px
+  position: relative
+  background: #fff
+  z-index: 1
+  +border-bottom-right-radius(5px)
+  +box-shadow(0 0 2px rgba(#000,0.1),0 0 8px rgba(#000,0.2))
+  // FIXME - Not part of layout, please move to somewhere else.
+  .settings &
+    +box-shadow(0 0 10px rgba(#5378b4, 0.2))
+    min-height: 200px
+  .pages-selector
+    +border-bottom-right-radius(5px)
+  .grid-compact &
+    +transition-duration(0.3s)
+    &:after
+      clear: both
+    &.active
+      margin-right: -220px
+  .contacts-search-bar
+    .header-bar
+      margin-top: 0
+      padding: 7px 10px 4px
+      border-top: none
+

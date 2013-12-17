@@ -1,0 +1,824 @@
+@import compass/css3/transition
+@import compass/css3/images
+@import compass/css3/box-shadow
+@import compass/css3/user-interface
+@import compass/css3/border-radius
+@import keybridge_core/shared/theme
+@import compass/utilities/sprites
+@import keybridge/shared/theme
+@import keybridge/shared/*.png
+
+.navbar
+  +box-shadow(inset 0 1px #769ad1, 0 0 8px rgba(black, 0.6), 0 0 2px rgba(black, 0.2))
+  +border-radius(5px 5px 0 0)
+  .navbar-inner
+    +border-radius(5px 5px 0 0)
+
+.btn-group > .btn
+  margin-right: 0
+  font-size: 12px
+
+.btn
+  +user-select(none)
+  position: relative
+  display: inline-block
+  padding: 7px 10px
+  padding: 2px 5px 3px 5px\0
+  background: #E5ECF4
+  background: image-url("pages-selector-btn-bg.png") top left repeat-x\0
+  +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+  +box-shadow( inset 0 0 1px #fff, inset 0 1px 0 #fff )
+  border: 1px solid #bed0e6
+  border-top: 1px solid #bdcfe5
+  border-bottom: 1px solid #a6bedd
+  border-radius: 4px
+  color: #a6bedc
+  font-size: 12px
+  line-height: 1em
+  text-shadow: 0 1px 0 #fff
+  margin: 0 5px 0 0
+  &:hover
+    background: #DCE5F1
+    +background-image(linear-gradient(top, #e4eaf2, #dce5f1))
+    color: #5D90cD
+    border: 1px solid #BDCFE5
+  &.mini
+    padding: 0px 5px
+  &.num
+    margin-bottom: 8px
+    padding: 0 8px
+    span
+      display: inline-block
+      padding: 4px 5px
+      color: #88A6D6
+      &:first-child
+        padding-left: 0
+      &:last-child
+        padding-right: 0
+      &.num
+        color: #ABC1DC
+        border-left: 1px solid #B8CBE2
+        +box-shadow(inset 1px 0 0 rgba(white, 0.5))
+  &.filter-btn
+    &:hover
+      border: 1px solid #3682E1
+      color: #3682E1
+      +box-shadow(0 0 2px #4692F1)
+      +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+      span
+        color: #3682E1
+      span.num
+        border-left: 1px solid #3682E1
+
+  &:last-child
+    margin-right: 0
+  &.btn-icon
+    padding: 4px
+    span
+      display: inline-block
+      vertical-align: middle
+      padding: 0 4px
+  &.btn-icon-text
+    padding: 4px 10px
+  span
+    padding-top: 3px
+    padding-bottom: 3px
+    line-height: 1em
+  i, .icon
+    display: inline-block
+    vertical-align: middle
+    width: 16px
+    height: 16px
+  &.btn-shadow
+    +box-shadow(inset 0 0 1px white, inset 0 1px 0 white, 0 1px 2px rgba(#a7bedb, 0.5))
+    &:active
+      +box-shadow(inset 0 2px 3px rgba(#B6C7DC, 0.6), 0 1px 0 #fff)
+  &.btn-primary
+    background: #4F91FA
+    +background-image(linear-gradient(top, #4F91FA, #2a73e8))
+    +box-shadow(inset 0 1px 0 rgba(white, 0.3))
+    border: 1px solid #3179EF
+    color: #fff
+    text-shadow: 0 -1px 0 #1A3767
+    &:hover
+      background: #4F91FA
+      +background-image(linear-gradient(top, #2a73e8, #0063cc))
+      color: #fff
+    &:active
+      background: #4F91FA
+      +box-shadow(inset 0 2px 5px rgba(black, 0.3))
+      +background-image(linear-gradient(top, #2a73e8, #0063cc))
+      color: #fff
+    &.btn-shadow
+      +box-shadow(inset 0 0 1px (#fff, 0.3), inset 0 1px 0 (#fff, 0.3), 0 1px 2px rgba(#a7bedb, 0.5))
+      &:active
+        +box-shadow(inset 0 2px 3px rgba(#B6C7DC, 0.6), 0 1px 0 (#fff, 0.3))
+  &.btn-danger
+    color: #fff
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
+    background: #da4f49
+    background-color: #da4f49
+    *background-color: #bd362f
+    +background-image(linear-gradient(to bottom, #ee5f5b, #bd362f))
+    background-repeat: repeat-x
+    border-color: #bd362f #bd362f #802420
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
+    +box-shadow(inset 0 1px 0 rgba(white, 0.3))
+    &:hover
+      color: #fff !important
+      +background-image(linear-gradient(to bottom, #fe6f6b, #cd564f))
+    &:active
+      color: #fdc9c7
+      background-color: #da4f49
+      +background-image(linear-gradient(to bottom, #ee5f5b, #bd362f))
+      +box-shadow( inset 0 2px 5px rgba(#000, 0.2), inset 0 1px 2px rgba(#000, 0.2), 0 1px 0 #fff)
+    &:link, &:visited
+      color: #fff
+  &.btn-small
+    display: inline-block
+    vertical-align: middle
+    padding: 6px 10px
+  &:active, &.active
+    background: #DCE5F1
+    +background-image(linear-gradient(top, #cad9eb, #dbe5f1))
+    color: #5D90cD
+    border: 1px solid #B7C8DD
+    border-top: 1px solid #B7C8DD
+    +box-shadow(inset 0 2px 3px rgba(#B6C7DC, 0.6), 0 1px 0 rgba(#fff, 0.5))
+  &.btn-back-product
+    position: relative
+    border: 1px solid #143976
+    border-bottom: 1px solid #3e639e
+    padding: 6px 10px 6px 5px
+    text-shadow: 0 -1px 0 #14366e
+    +box-shadow( inset 0 -1px 0 #14366e, inset 0 1px 0 #6b8fc9)
+    +background(linear-gradient(top, #4368a4, #234785, #1c407d))
+    &:before
+      content: ''
+      position: absolute
+      left: -15px
+      top: -1px
+      width: 18px
+      height: 30px
+      +shared-sprite(btn-back-product)
+    &:hover
+      border: 1px solid #204279
+      border-bottom: 1px solid #3e639e
+      +background(linear-gradient(top, #4c70a9, #30538d, #264983))
+      &:before
+        +shared-sprite(btn-back-product-hover)
+    &:active
+      border: 1px solid #204279
+      border-top: 1px solid rgba(#204279, 0)
+      border-bottom: 1px solid #3e639e
+      +box-shadow(inset 0 1px 3px #102c59)
+      +background(linear-gradient(top, #183c79, #183c79, #183c79))
+      &:before
+        +shared-sprite(btn-back-product-active)
+
+
+.shadow
+  +box-shadow(inset 0 0 1px white, inset 0 1px 0 white, 0 1px 2px rgba(#a7bedb, 0.5))
+
+.btn-tag
+  @extend .shadow
+  +user-select(none)
+  cursor: pointer
+  position: relative
+  display: inline-block
+  border-radius: 4px
+  color: #a6bedc
+  font-size: 12px
+  line-height: 1em
+  text-shadow: 0 1px 0 #fff
+  vertical-align: top
+  padding: 6px 10px
+  padding-left: 5px
+  margin-left: 10px
+  margin-right: 5px
+  border: 1px solid #bed0e6
+  border-bottom: 1px solid #a6bedd
+  +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+  +box-shadow(inset 0 0 1px white, inset 0 1px 0 white, 0 1px 2px rgba(#a7bedb, 0.5))
+  &:before
+    content: ''
+    position: absolute
+    left: -11px
+    top: 50%
+    padding: 0
+    margin-top: -14px
+    display: inline-block
+    vertical-align: middle
+    width: 14px
+    height: 28px
+    +shared-sprite(icon-tags)
+  &:hover
+    border-bottom: 1px solid #a6bedd
+    color: #5D90cD
+    +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+  &.active, &:active
+    +background-image(linear-gradient(top, #ccdaec, #dbe5f1))
+    border-top: 1px solid #a0b4cf
+    border-bottom: 1px solid #d3deec
+    +box-shadow(inset 0 1px 1px #b6c6dd, 0 1px 0 #fff)
+    &:before
+      +shared-sprite(icon-tags-active)
+
+.btn-tag-mini
+  +user-select(none)
+  cursor: pointer
+  position: relative
+  display: inline-block
+  height: 10px
+  border-radius: 4px
+  color: #a6bedc
+  font-size: 12px
+  line-height: 11px
+  text-shadow: 0 1px 0 #fff
+  vertical-align: top
+  padding: 4px 10px
+  padding-left: 8px
+  margin-left: 5px
+  margin-right: 5px
+  margin-bottom: 8px
+  border: 1px solid #bed0e6
+  border-bottom: 1px solid #a6bedd
+  +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+  +box-shadow(inset 0 0 1px white, inset 0 1px 0 white, 0 1px 2px rgba(#a7bedb, 0.5))
+  &:before
+    content: ''
+    position: absolute
+    left: -11px
+    top: 50%
+    margin-top: -11px
+    display: inline-block
+    vertical-align: middle
+    width: 15px
+    height: 22px
+    +shared-sprite(icon-tags-mini)
+  &:hover
+    border: 1px solid #3682E1
+    color: #3682E1
+    +box-shadow(0 0 2px #4692F1)
+    +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+    &:before
+      +shared-sprite(icon-tags-mini-hover)
+  &.active, &:active
+    +background-image(linear-gradient(top, #ccdaec, #dbe5f1))
+    border-top: 1px solid #a1b4cf
+    border-bottom: 1px solid #d2deec
+    +box-shadow(inset 0 1px 1px #b6c6dd, 0 1px 0 #fff)
+    &:before
+      +shared-sprite(icon-tags-mini-toggle)
+
+.btn-arrow
+  padding: 6px 10px
+  margin: 0 5px 0 20px
+  position: relative
+  i.arrow
+    width: 25px
+    height: 27px
+    position: absolute
+    right: -18px
+    top: -1px
+    +shared-sprite(btn-arrow-right)
+  &:before
+    content: ''
+    width: 23px
+    height: 27px
+    position: absolute
+    left: -18px
+    top: -1px
+    +shared-sprite(btn-arrow-left)
+  &:hover
+    i.arrow
+      +shared-sprite(btn-arrow-right-hover)
+    &:before
+      content: ''
+      +shared-sprite(btn-arrow-left-hover)
+  &:active, &.active
+    border-bottom: 1px solid #d4dfed
+    border-top: 1px solid #a4b7d2
+    +box-shadow( inset 0 1px 2px rgba(#b4c7de, 0.9), 0 1px 0 #fff)
+    i.arrow
+      +shared-sprite(btn-arrow-right-active)
+    &:before
+      content: ''
+      +shared-sprite(btn-arrow-left-active)
+
+.btn-back
+  vertical-align: top
+  height: 26px
+  margin-left: 10px
+  margin-right: 5px
+  padding: 4px 10px 4px 0px
+  box-sizing: border-box
+  border: 1px solid #bed0e6
+  border-bottom: 1px solid #a6bedd
+  color: #a7bedb
+  +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+  +box-shadow(inset 0 0 1px white, inset 0 1px 0 white, 0 1px 2px rgba(#a7bedb, 0.5))
+  i
+    display: inline-block
+    font-size: 14px
+  &:before
+    content: ''
+    position: absolute
+    left: -11px
+    top: 50%
+    margin-top: -14px
+    display: inline-block
+    vertical-align: middle
+    width: 14px
+    height: 28px
+    +shared-sprite(icon-tags-back)
+  &:hover
+    border-bottom: 1px solid #a6bedd
+    +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+  &.active, &:active
+    +background-image(linear-gradient(top, #ccdaec, #dbe5f1))
+    border-top: 1px solid #a0b4cf
+    border-bottom: 1px solid #d3deec
+    +box-shadow( inset 0 1px 1px #b6c6dd, 0 1px 0 #fff )
+    &:before
+      +shared-sprite(icon-tags-back-active)
+
+.table
+  margin-bottom: 0
+
+[class^="icon-"], [class*=" icon-"]
+  display: inline-block
+  width: auto
+  height: auto
+  line-height: 1em
+  vertical-align: middle
+  background-image: none
+  background-position: center center
+  background-repeat: no-repeat
+  margin-top:  0
+
+ul.breadcrumb
+  padding: 0
+  margin: 0
+  background: transparent
+  font-weight: bold
+  li
+    text-transform: capitalize
+    *
+      vertical-align: middle
+    a
+      color: #a7bedb
+    &.active
+      position: relative
+      top: 1px
+      color: #5377B3
+      .divider
+        display: none
+    .divider
+      width: 11px
+      height: 29px
+      margin: 0 5px
+      display: inline-block
+      +shared-sprite(divider)
+
+// Label
+.label
+  background-color: #dee4ec
+  border: 1px solid #b9bfc8
+  text-shadow: none
+  color: #707885
+  font-weight: normal
+
+.label-info
+  background: #c4d8f3
+  border: 1px solid #7aaeee
+  color: #3284eb
+
+.label-success
+  background: #dce5c5
+  border: 1px solid #b1ca41
+  color: #899d2c
+
+.label-important
+  background: #fbcfd0
+  border: 1px solid #fc9292
+  color: #fa4649
+
+// label style for invoice
+.label-paid
+  background: #dce5c5
+  border: 1px solid #b1ca41
+  color: #899d2c
+
+.label-outstanding
+  background: #fbcfd0
+  border: 1px solid #fc9292
+  color: #fa4649
+
+//input[type=radio]
+input[type=radio]
+  position: relative
+  -webkit-appearance: button
+  width: 16px
+  height: 16px
+  margin-top: 3px
+  +background(linear-gradient(top, #dde4ee, #fff))
+  border-radius: 10px
+  border: 1px solid #b2bfd1
+  &:before
+    content: ""
+    position: absolute
+    left: 50%
+    top: 50%
+    width: 0px
+    height: 0px
+    margin-top: 0px
+    margin-left: 0px
+    +transition-duration(0.3s)
+  &:checked
+    +background(linear-gradient(top, #5191f9, #85b3fc))
+    border: 1px solid #215fc4
+    &:before
+      content: ""
+      position: absolute
+      left: 50%
+      top: 50%
+      width: 6px
+      height: 6px
+      margin-top: -3px
+      margin-left: -3px
+      background: #fff
+      border-radius: 10px
+      +box-shadow( 0 1px 1px #2260c4 )
+
+
+//input[type=checkbox]
+input[type=checkbox]
+  margin: 0
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  -webkit-appearance: button
+  width: 16px
+  height: 16px
+  border: 1px solid #C6CFDB
+  border-top: 1px solid #B1BED0
+  border-bottom: 1px solid #DBDFE6
+  border-radius: 4px
+  +background-image(linear-gradient(top, #dee5ef, #f4f8ff))
+  +box-shadow( 0 1px 0 rgba(white, 0.3) )
+  &:hover
+    +background-image(linear-gradient(top, #c1cee2, #f4f8ff))
+  &:checked
+    +background-image(linear-gradient(top, #5192fa, #87b4fc))
+    border-top: 1px solid #2567D4
+    border-bottom: 1px solid #2F77EB
+    border: 1px solid #1D5BC0
+    &:hover
+      +background-image(linear-gradient(top, #61a2ff, #87b4fc))
+    &:before
+      content: ""
+      position: absolute
+      left: -1px
+      top: -1px
+      width: 16px
+      height: 16px
+      +shared-sprite(checked-icon)
+  &:disabled
+    opacity: 0.5
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")
+    filter: gray
+    -webkit-filter: grayscale(50%)
+    &:hover
+      +background-image(linear-gradient(top, #dee5ef, #f4f8ff))
+    &:checked
+      opacity: 0.5
+      +background-image(linear-gradient(top, #5192fa, #87b4fc))
+      &:hover
+        +background-image(linear-gradient(top, #5192fa, #87b4fc))
+
+.poptop-block
+  .poptop
+    width: 200px
+    position: absolute
+    top: 125%
+    right: 50%
+    margin-right: -17px
+    z-index: 10000
+    display: none
+    border: 1px solid #BDCFE5
+    border-radius: 6px
+    +box-shadow( 0 0 15px rgba(black, 0.2) )
+    line-height: 1em
+    background: #fff
+    &.blue
+      &:after
+        content: ""
+        position: absolute
+        top: -8px
+        right: 10px
+        width: 11px
+        height: 9px
+    &.white
+      left: 0
+      right: 0
+      width: auto
+      top: 100%
+      &:after
+        content: ""
+        position: absolute
+        top: -10px
+        right: 50%
+        width: 15px
+        margin-left: -7px
+        height: 10px
+  .switch-btn
+    display: inline-block
+    cursor: pointer
+    color: #B7C3D4
+    margin-right: 0
+    &:hover
+      color: #377dee
+    &.dial-pad-btn
+      padding: 5px
+  &.active
+    .poptop
+      display: block
+    .switch-btn
+      color: #377dee
+      text-shadow: 0 0 10px #377dee
+
+.poptop-header
+  position: relative
+  +background-image(linear-gradient(top, #5478b1, #163b74))
+  background: image-url("ie-bg/bg-dialpad-header.png") bottom left repeat-x\0
+  border-radius: 4px 4px 0 0
+  color: #fff
+  text-shadow: 0 -1px 1px #0f2b57
+  font-size: 1em
+  padding: 8px 0
+  margin: -1px -1px 0 -1px
+  border: 1px solid #1c3a69
+  border-top: 1px solid #4569a3
+  border-bottom: 1px solid #0f2b57
+  +box-shadow( inset 0 1px 0 #769ad1 )
+  text-align: center
+  input
+    text-align: left
+    font-size: 0.9em
+
+.dropdown-menu
+  padding: 0
+  >li
+    color: #5579b2
+    padding: 3px 5px
+    text-align: left
+    &:first-child
+      border-top-left-radius: 5px
+      border-top-right-radius: 5px
+    &:last-child
+      border-bottom-left-radius: 5px
+      border-bottom-right-radius: 5px
+    &:hover
+      border: 1px solid #1C59BD
+      +background-image(linear-gradient(top, #5091fa, #2972e8))
+      background: image-url("ie-bg/bg-dropdown-li.png") bottom left repeat-x\0
+      +box-shadow( inset 0 1px 0 #87B4FC )
+      color: #fff
+      margin: -1px
+      position: relative
+      z-index: 100
+      text-shadow: 0 1px 3px #2972e8
+      a:hover
+        background: transparent
+        border-radius: 5px
+        border-color: none
+
+
+.dropdown-selector
+  border: 1px solid #bfd0e5
+  border-radius: 5px
+  margin-right: 5px
+.dropdown
+  display: inline-block
+  vertical-align: middle
+  .dropdown-toggle
+    display: inline-block
+    vertical-align: middle
+    border-radius: 4px
+    background: #fff
+    span
+      display: inline-block
+      vertical-align: middle
+      padding: 2px 12px
+      border-radius: 4px 0 0 4px
+      color: #A7BEDB
+      font-size: 12px
+    .btn
+      color: #A7BEDB
+      font-size: 10px
+      font-weight: bold
+      text-shadow: 0 1px 0 #fff
+      padding: 6px 7px
+      padding: 2px 9px\0
+      border: none
+      border-radius: 0 4px 4px 0
+      border-left: 1px solid #bfd0e5
+      margin-bottom: 0
+
+.table
+  display: table
+  margin: 0
+  .rows
+    display: table-row
+    .cells
+      display: table-cell
+
+.media, .media-body
+  overflow: visible
+
+.nav-tabs
+  margin-bottom: 20px
+  margin: 0
+  li
+    padding: 5px 0 0 5px
+    a
+      +user-select(none)
+      cursor: pointer
+      color: $darkenTextColor
+    &.active
+      a
+        +user-select(none)
+        color: $darkenTextColor
+        &:hover
+          +background(top, #fff, #f8f9fa)
+          color: $darkenTextColor
+
+.dropdown-menu.bluehead
+  position: absolute
+  left: auto
+  right: -20px
+  margin-top: 20px
+  +border-radius(0 0 5px 5px)
+  &:before
+    content: ""
+    position: absolute
+    top: -12px
+    left: -1px
+    right: -1px
+    height: 12px
+    +background-image(linear-gradient(top, #5478b1, #163b74))
+    background: image-url("ie-bg/bg-datepicker.png") bottom left repeat-x\0
+    border-radius: 4px 4px 0 0
+    border: 1px solid #1c3a69
+    border-top: 1px solid #4569a3
+    border-bottom: 1px solid #0f2b57
+    +box-shadow( inset 0 1px 0 #769ad1 )
+    box-sizing: border-box
+  &:after
+    content: ""
+    position: absolute
+    top: -19px
+    right: 20px
+    width: 11px
+    height: 9px
+    +shared-sprite(date-picker-top)
+  >li
+    padding: 0!important
+    border: 1px solid #d7e3f3
+    border-top: none
+    border: none
+    a
+      cursor: pointer
+      margin: 0
+      padding: 5px 8px
+      border-top: 1px solid #fff
+      border-bottom: 1px solid #d7e3f3
+      color: $darkenTextColor
+    &:hover
+      background: none
+      padding: 0!important
+      margin: 0px
+      a
+        border-top: 1px solid #e9f2fc
+        background: #e9f2fc
+        text-shadow: none
+        color: $baseTextColor
+    &:first-child
+      +border-radius(0)
+      a
+        +border-radius(0)
+    &:last-child
+      +border-radius(0 0 5px 5px)
+      a
+        border-bottom: none
+        +border-radius(0 0 5px 5px)
+  &.center
+    &:after
+      right: 50%
+      width: 11px
+      margin-right: -5px
+
+form
+  margin: 0
+
+.popover.bottom
+  padding: 0
+  .popover-title
+    height: 12px
+    margin: -1px -1px 0 -1px
+    +background-image(linear-gradient(top, #5478b1, #163b74))
+    background: image-url("ie-bg/bg-datepicker.png") bottom left repeat-x\0
+    border-radius: 4px 4px 0 0
+    border: 1px solid #1c3a69
+    border-top: 1px solid #4569a3
+    border-bottom: 1px solid #0f2b57
+    +box-shadow( inset 0 1px 0 #769ad1 )
+    box-sizing: border-box
+  .arrow
+    position: absolute
+    top: -8px
+    right: 20px
+    width: 11px
+    height: 9px
+    margin: 0
+    padding: 0
+    border: none
+    +shared-sprite(date-picker-top)
+    &:after
+      display: none
+.control-group
+  input, textarea
+    border: 1px solid #cbd6e6
+
+input:focus:invalid:focus
+  +box-shadow( 0 0 8px rgba(82, 168, 236, 0.6) )
+
+.error
+  input
+    border-color: #b94a48
+
+abbr[title]
+  border-bottom: none
+
+.pagination
+  line-height: 0
+  display: inline-block
+  vertical-align: middle
+  margin: 0
+  ul
+    +box-shadow( none )
+    li
+      display: inline-block
+      .btn
+        padding: 2px 6px
+        margin: 0 3px
+        border: 1px solid #b5c9e1
+        &:hover
+          border: 1px solid #3284eb
+          color: #3284eb !important
+          +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+        &:active, &.active
+          border: 1px solid #b5c9e1
+          background: #d4dfed
+          +box-shadow( inset 0 3px 5px #b5c7dc, 0 1px 0 #fff )
+          color: #5d93d5
+      &.disabled
+        a.btn
+          cursor: pointer
+          color: #a6bedc
+          font-weight: bold
+        .gap
+          border: none
+          padding: 4px
+
+.input-prepend, .input-append
+  .add-on
+    background: #e8effc
+    border-color: #cbd6e6
+
+.img-polaroid
+  position: relative
+  +border-radius(4px)
+  +box-shadow( 0 1px 1px #a6bedc)
+  border: none
+
+select, textarea,
+input[type="text"], input[type="password"], input[type="datetime"],
+input[type="datetime-local"], input[type="date"], input[type="month"],
+input[type="time"], input[type="week"], input[type="number"],
+input[type="email"], input[type="url"], input[type="search"],
+input[type="tel"], input[type="color"], .uneditable-input
+  font-size: 13px
+
+.bootstrap-datetimepicker-widget li > a:hover
+  background: transparent
+.tooltip
+  &.top .tooltip-arrow
+    bottom: 1px
+  &.right .tooltip-arrow
+    left: 1px
+  &.bottom .tooltip-arrow
+    top: 1px
+  &.left .tooltip-arrow
+    right: 1px

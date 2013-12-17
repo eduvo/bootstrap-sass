@@ -1,0 +1,124 @@
+@import compass/utilities/sprites
+@import shared/*.png
+
+.dashboard-right-rows
+  margin: 15px
+  background: image-url("shared/dashed-line.png") bottom left repeat-x
+  padding-bottom: 10px
+  margin-top: 15px
+  margin-bottom: 0
+  .rows-content
+    .btn
+      margin-bottom: 8px
+  &.opportunity
+    .rows-content
+      ul
+        li
+          margin-bottom: 8px
+          span.underline
+            text-decoration: underline
+            font-size: 0.7em
+            margin-left: 1px
+            vertical-align: top
+  &.contact
+    .rows-content
+      ul
+        li
+          margin-bottom: 10px
+          img
+            display: inline-block
+            vertical-align: middle
+            border-radius: 4px
+            margin-right: 8px
+            width: 30px
+            height: 30px
+          .contact-text
+            display: inline-block
+            vertical-align: middle
+            p
+              margin: 0
+              &.title
+                color: #0E2A56
+                margin-bottom: 2px
+                text-shadow: 0 1px 0 #fff
+              &.position
+                color: #769AD1
+                font-size: 0.8em
+                line-height: 0.8em
+                text-shadow: 0 1px 0 #fff
+                padding-bottom: 4px
+  &.billing
+    .rows-content
+      ul
+        li
+          .title
+            color: #3284EB
+            margin-bottom: 10px
+          .content
+            p.link
+              color: #3284EB
+            .table
+              display: table
+              width: 100%
+              margin: 0
+              margin-bottom: 5px
+              .tr
+                display: table-row
+                .td
+                  display: table-cell
+                  width: 50%
+                  padding-bottom: 6px
+                  p
+                    margin: 0
+                    font-size: 0.9em
+                  .billing-title
+                    color: #769AD1
+                    text-shadow: 0 1px 0 #fff
+                  .billing-centent
+                    color: #0E1A36
+                    font-weight: bold
+                    text-shadow: 0 1px 0 #fff
+  .dropform-group
+    >a
+      i
+        margin-left: 2px
+  .rows-title
+    margin-bottom: 5px
+    color: #B7C3D4
+    font-size: 0.8em
+    position: relative
+    padding: 5px 0
+    text-shadow: 0 1px 0 #fff
+    .poptop-block
+      cursor: pointer
+      position: absolute
+      top: 0
+      right: 0
+      .switch-btn
+        padding: 5px
+      .poptop
+        top: 100%
+        right: 50%
+        margin-right: -17px
+        &.blue
+          &:after
+            +shared-sprite(date-picker-top)
+        &.white
+          &:after
+            +shared-sprite(arrow-dropdown)
+  .rows-content
+    color: #4E6185
+    .rows-content-blocks
+      position: relative
+      input.s-checkbox
+        position: absolute
+        left: 0
+        top: 0
+      label,p
+        margin-left: 25px
+
+ul.sidebar-list
+  li
+    border-bottom: 1px solid #E8ECF4
+    border-top: 1px solid #fff
+    background: #FBFCFE

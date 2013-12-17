@@ -1,0 +1,522 @@
+@import compass/css3/images
+@import compass/css3/box-sizing
+@import compass/css3/transform
+@import compass/css3/transition
+@import compass/utilities/sprites
+@import header/*.png
+@import shared/*.png
+$search-result-width: 400px
+
+#header
+  text-align: right
+  z-index: 9999
+  .header-inner
+    position: relative
+    height: 80px
+
+#logo-block
+  position: absolute
+  left: 0
+  top: 50%
+  margin-top: -30px
+  padding-bottom: 4px
+  .dropdown-menu
+    width: 100%
+    min-width: 260px
+    z-index: 10000
+  #logo
+    position: relative
+    cursor: pointer
+    padding: 8px 35px 5px 12px
+    border: 1px solid #F4F8FF
+    background: none
+    border-radius: 5px
+    overflow: hidden
+    white-space: nowrap
+    display: inline-block
+    color: #5579B2
+    text-align: left
+    text-shadow: 0 1px 0 #fff
+    box-shadow: none
+    .company
+      color: #b0bdd1
+      margin-top: 5px
+      span
+        display: inline-block
+        vertical-align: middle
+    .icon-chevron-down
+      position: absolute
+      right: 8px
+      top: 50%
+      margin-top: -9px
+      color: #7EADE7
+      text-shadow: 0 1px 0 #fff
+      padding-left: 10px
+      font-weight: bold
+      font-size: 16px
+      vertical-align: middle
+      opacity: 0
+      &:before
+        content: "\f053"
+    img
+      height: 30px
+      width: auto
+  &:hover, &.active, &.open
+    #logo
+      border: 1px solid #BACDE3
+      +background-image(linear-gradient(top, white, #dde6f1))
+      background: image-url("ie-bg/bg-logo-switchbtn.png") bottom left repeat-x\0
+      box-shadow: inset 0 1px 0 #fff, 0 1px 3px #DDE6F1
+      .icon-chevron-down
+        opacity: 1
+  &:active
+    #logo
+      box-shadow: inset 0 2px 10px rgba(#adb6c1, 0.5), 0 1px 0 white
+  &.open
+    #logo
+      .icon-chevron-down
+        &:before
+          content: "\f078"
+  >a
+    padding: 10px
+    border-bottom: 1px solid #EAEEF4
+    color: #4569A3
+    img
+      margin-right: 5px
+      height: 24px
+  >ul
+    border: solid 1px #bdcfe6
+    &:before
+      content: ''
+      position: absolute
+      bottom: 100%
+      right: 50%
+      margin-right: -7px
+      +shared-sprite(arrow-dropdown)
+      width: 15px
+      height: 8px
+    >li
+      text-align: left
+      background: #F8F9FA
+      cursor: pointer
+      padding: 0
+      &:last-child a
+        margin-bottom: -1px
+      &:hover
+        margin: 0 // Override bootstrap style
+        border: none // Override bootstrap style
+        box-shadow: none // Override bootstrap style
+        text-shadow: none // Override bootstrap style
+      a
+        position: relative
+        display: block
+        border-top: 1px solid rgba(#8693a2, 0.2)
+        border-bottom: 1px solid transparent
+        padding: 10px
+        padding-right: 45px
+        margin: 0 -1px
+        color: #4569A3
+        white-space: nowrap
+        img
+          display: inline-block
+          margin-right: 5px
+          vertical-align: top
+          height: 24px
+        span
+          display: inline-block
+          white-space: normal
+          vertical-align: middle
+          margin: 3px 8px
+          margin-left: 0
+          font-size: 0.9em
+        .span-progress
+          position: absolute
+          right: 5px
+          top: 50%
+          margin-top: -10px
+          color: #A7BEDB
+          padding: 0
+          text-shadow: 0 1px 0 #fff
+        &:hover
+          border: 1px solid #1C59BD
+          +background-image(linear-gradient(top, #5091fa, #2972e8))
+          background: image-url("ie-bg/bg-logo-dropdown.png") bottom left repeat-x\0
+          box-shadow: inset 0 1px 0 #87B4FC
+          color: #fff!important
+          text-shadow: 0 0 3px #1a62c8
+          position: relative
+          z-index: 100
+          border-radius: 0
+          .span-progress
+            color: #9DBFF8
+            text-shadow: none
+      &.second
+        background: #EAEEF4
+        a
+          padding-left: 40px
+          position: relative
+          &:after
+            content: ""
+            position: absolute
+            top: 13px
+            left: 20px
+            width: 16px
+            height: 16px
+            +header-sprite(arrow-bottom-right)
+          &:hover
+            &:after
+              +header-sprite(arrow-bottom-right-active)
+      &:first-child
+        border-radius: 5px 5px 0 0
+        margin: 0
+        a
+          border-top: none
+          border-radius: 5px 5px 0 0
+      &:last-child
+        border-bottom: none
+        border-radius: 0 0 5px 5px
+        a
+          border-radius: 0 0 5px 5px
+
+
+
+#setting-bar
+  display: inline-block
+  vertical-align: middle
+  .column
+    display: inline-block
+    position: relative
+    vertical-align: middle
+    padding: 0 15px
+    color: #5579B2
+  > a.column
+    &:before
+      content: ''
+      position: absolute
+      right: 0
+      width: 1px
+      height: 11px
+      top: 50%
+      margin-top: -5px
+      +header-sprite(dashed)
+
+    &:last-child
+      background: none
+    .icon
+      width: 16px
+      height: 16px
+      margin-right: 10px
+    > div
+      display: inline-block
+      vertical-align: middle
+    &#profile
+      .profile-pic
+        border-radius: 5px
+        overflow: hidden
+      .icon-chevron-down
+        margin-left: 12px
+        font-size: 10px
+        font-weight: bold
+        color: #7EADE7
+  #profile
+    margin: 0 15px
+    padding: 0
+    .dropdown-toggle
+      background: none
+
+.profile-pic
+  display: inline-block
+  vertical-align: middle
+  border-radius: 5px
+  width: 30px
+  height: 30px
+  margin-right: 10px
+  img
+    border-radius: 5px
+
+.arrow-box
+  display: inline-block
+  vertical-align: middle
+  position: relative
+  background: #FC5453
+  padding: 5px 7px
+  border-radius: 3px
+  font-size: 10px
+  height: 5px
+  border: 1px solid #FC4A4A
+  color: #fff
+  line-height: 5px
+  +background-image(linear-gradient(top, #fc615f, #fc4a4a))
+  box-shadow: inset 0 1px rgba(white, 0.3)
+  &:after
+    right: 100%
+    border: solid transparent
+    content: " "
+    height: 0
+    width: 0
+    position: absolute
+    pointer-events: none
+  &:after
+    border-color: rgba(136, 183, 213, 0)
+    border-right-color: #FC5453
+    border-width: 4px
+    top: 50%
+    margin-top: -5px
+
+#title-bar
+  position: relative
+  z-index: 10
+  height: 40px
+  padding: 0 15px
+  border: 1px solid #2D4D80
+  box-shadow: inset 0 1px #769ad1, 0 0 8px rgba(black, 0.6), 0 0 2px rgba(black, 0.2)
+  background: image-url("title-bar-bg.png") center left repeat-x
+  +background-image(linear-gradient(top, #5579b2, #284c86, #163a73))
+  border-radius: 5px 5px 0 0
+  text-align: left
+
+.search
+  position: relative
+  >i.icon-search
+    position: absolute
+    right: 0
+    top: 0
+    font-size: 15px
+    padding: 4px 6px
+    color: #7EADE7
+  input
+    height: 15px
+    height: 14px\0
+    padding: 4px 25px 4px 10px
+    margin: 0
+    width: 200px
+    border-radius: 20px
+    font-size: 12px
+  &.white
+    display: inline-block
+    vertical-align: middle
+    input
+      background: #F7F9FD
+      border: 1px solid #C6D0DB
+      box-shadow: 0 1px 0 #fff, inset 0 2px 3px #E0E6F0
+      color: #A7BEDB
+      width: 240px
+      &::-webkit-input-placeholder
+        color: #A7BEDB
+        text-shadow: 0 1px 0px #fff
+      &:-moz-placeholder
+        color: #A7BEDB
+        text-shadow: 0 1px 0px #fff
+      &::-moz-placeholder
+        color: #A7BEDB
+        text-shadow: 0 1px 0px #fff
+      &:-ms-input-placeholder
+        color: #A7BEDB
+        text-shadow: 0 1px 0px #fff
+      &:focus
+        background: #fff
+        color: #23447B
+        text-shadow: none
+        &::-webkit-input-placeholder
+          opacity: 0
+        &:-moz-placeholder
+          opacity: 0
+        &::-moz-placeholder
+          opacity: 0
+        &:-ms-input-placeholder
+          opacity: 0
+  &.blue
+    position: absolute
+    top: 50%
+    margin-top: -13px
+    margin-right: 5px
+    right: 0
+    input
+      background: image-url("title-input-bg.png") center left repeat-x
+      +background-image(linear-gradient(top, #305693, #305693))
+      box-shadow: 0 1px 0 rgba(white, 0.2), inset 0 1px 9px rgba(#0e2a56, 0.5)
+      border: 1px solid #0E2A56
+      color: #7EADE7
+      text-shadow: 0 1px 2px #0E2A56
+      &::-webkit-input-placeholder
+        color: #7EADE7
+        text-shadow: 0 1px 2px #0E2A56
+      &:-moz-placeholder
+        color: #7EADE7
+        text-shadow: 0 1px 2px #0E2A56
+      &::-moz-placeholder
+        color: #7EADE7
+        text-shadow: 0 1px 2px #0E2A56
+      &:-ms-input-placeholder
+        color: #7EADE7
+        text-shadow: 0 1px 2px #0E2A56
+      &:focus
+        background: #EAEEF4
+        color: #15376C
+        text-shadow: none
+        &::-webkit-input-placeholder
+          opacity: 0
+          color: #EAEEF4
+        &:-moz-placeholder
+          opacity: 0
+          color: #EAEEF4
+        &::-moz-placeholder
+          opacity: 0
+          color: #EAEEF4
+        &:-ms-input-placeholder
+          opacity: 0
+          color: #EAEEF4
+
+#search-result
+  display: none
+  position: absolute
+  top: 140%
+  left: 50%
+  margin-left: - $search-result-width / 2
+  .mod-content
+    box-shadow: 0 0 5px rgba(#000, 0.2)
+    border-radius: 5px
+    .hd, .bd
+      width: $search-result-width
+      +box-sizing(border-box)
+    .hd
+      position: relative
+      +background-image(linear-gradient(top, #5478b1, #163b74))
+      background: image-url("ie-bg/bg-datepicker.png") bottom left repeat-x\0
+      border-radius: 4px 4px 0 0
+      color: #fff
+      text-shadow: 0 -1px 1px #0F2B57
+      font-size: 0.8em
+      padding: 6px 10px
+      border: 1px solid #1C3A69
+      border-top: 1px solid #4569A3
+      border-bottom: 1px solid #0F2B57
+      box-shadow: inset 0 1px 0 #769AD1
+      >i, >div
+        display: inline-block
+        margin-right: 5px
+      &:before
+        content: ""
+        position: absolute
+        top: -8px
+        left: 50%
+        width: 11px
+        margin-left: -5px
+        height: 9px
+        +shared-sprite(date-picker-top)
+    .bd
+      background: #EAEEF5
+      border: 1px solid #BECFE5
+      border-radius: 0 0 5px 5px
+      .results-group
+        .pull-left
+          padding: 5px 8px
+          color: #A7BEDB
+          text-shadow: 0 1px #fff
+          >span, >i
+            vertical-align: middle
+        >.pull-right
+          position: relative
+          padding: 5px 0
+          width: 300px
+          background: #FBFCFD
+          text-align: left
+          color: #4569A3
+          text-shadow: 0 1px 0 #fff
+          border-bottom: 1px solid #E6ECF4
+          border-top: 1px solid #fff
+          border-left: 1px solid #D1D5E0
+          box-sizing: border-box
+          i
+            margin-right: 0
+          &:before
+            content: ""
+            position: absolute
+            top: -1px
+            bottom: -1px
+            left: -6px
+            width: 6px
+            +background-image(linear-gradient(left, rgba(#DEE5F0, 0), rgba(#DEE5F0, 0.8)))
+          ul
+            li
+              cursor: pointer
+              padding: 1px 8px
+              &.active
+                box-sizing: border-box
+                padding: 0 8px
+                border-top: 1px solid darken(#E9F2FC, .8)
+                border-bottom: 1px solid darken(#E9F2FC, .8)
+                background: #E9F2FC
+              table
+                width: 100%
+                tr
+                  td
+                    padding-left: 8px
+                    vertical-align: top
+                    &.status
+                      padding: 0
+                      width: 45px
+                      color: #A7BEDB
+                    &:first-child
+                      width: 16px
+                      padding: 0
+              &:hover
+                td
+                  color: #3284EB
+                  &.status
+                    color: #4569A3
+          p
+            margin: 0
+        &:after
+          display: block
+          content: ""
+          clear: both
+          width: 0
+        &:last-child
+          .pull-right
+            border-radius: 0 0 5px 0
+        &.search-config
+          cursor: pointer
+          .pull-right
+            padding: 2px 8px
+            +background-image(linear-gradient(top, #f7f9fc, #e9eff6))
+            background: image-url("ie-bg/bg-primary-header.png") bottom left repeat-x\0
+            i.icon-preferences
+              margin: 2px 0
+              float: right
+
+
+#datetime-bar
+  display: inline-block
+  vertical-align: middle
+  .back
+    a
+      color: #7aabec
+      text-shadow: 0 1px 1px #0c2957
+    i
+      display: inline-block
+      width: 17px
+      height: 11px
+      vertical-align: middle
+      margin-right: 3px
+      +header-sprite(backto)
+  #date
+    color: #fff
+    font-size: 15px
+    margin-right: 5px
+    text-shadow: 0 -1px 1px #1C3A68,0 0 1px #0C2A58
+    display: inline-block
+    vertical-align: middle
+  #time
+    color: #FEE333
+    font-size: 11px
+    text-shadow: 0 -1px 1px #1C3A68,0 0 1px #0C2A58
+    display: inline-block
+    vertical-align: middle
+
+.setting-email
+  +shared-sprite(setting-email)
+.setting-help
+  +shared-sprite(setting-help)
+.setting-tools
+  +shared-sprite(setting-tools)
