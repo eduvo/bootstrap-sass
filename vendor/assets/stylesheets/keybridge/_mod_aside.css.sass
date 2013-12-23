@@ -1,0 +1,45 @@
+@import compass/css3/border-radius
+@import compass/css3/text-shadow
+
+.mod-aside
+  .mod-content
+    color: #4e6185
+    margin: 0 10px 10px
+    padding: 0 0 15px
+    background: image-url("shared/dashed-line.png") bottom left repeat-x
+  .hd
+    position: relative
+    color: #b7c3d4
+    +text-shadow(0 1px 0 white)
+    margin-bottom: 5px
+    font-size: 12px
+    h4
+      color: #b7c3d4
+      font-weight: normal
+      text-shadow: 0 1px 0 #fff
+      text-transform: uppercase
+      margin-bottom: 5px
+      padding: 5px 0
+      i
+        position: relative
+        top: -2px
+    .dropform-group
+      position: absolute
+      top: 0
+      right: 0
+    .action-link
+      position: absolute
+      right: 0px
+      top: 10px
+      width: 16px
+      height: 16px
+      overflow: hidden
+      *
+        vertical-align: top
+        color: #b7c3d4
+        text-shadow: 0 1px 0 #fff
+        &:hover
+          color: #1d5bc0
+          font-size: 12px
+  &:last-of-type .mod-content
+    background: none
