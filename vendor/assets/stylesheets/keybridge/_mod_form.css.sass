@@ -1,0 +1,232 @@
+@import compass/css3/images
+@import compass/css3/box-shadow
+
+.mod-form
+  a:link, a:visited
+    color: #2c82ef
+  a:hover
+    color: #769ad1
+  a.btn,
+  a.btn:link,
+  a.btn:visited
+    color: #a6bedc
+  a.btn:hover
+    color: #769ad1
+  select
+    visibility: hidden
+    width: 90px
+  .bd
+    padding: 20px
+  margin: 0
+  overflow: visible
+  .org-autocomplete
+    position: relative
+    #contacts-search-result
+      top: 110%
+      left: 190px
+      .bd
+        padding: 0
+        li.media
+          font-size: 14px
+          a
+            &:link, &:visited
+              color: #5377B3
+            .media-body
+              margin-left: 0
+  .fancySelectMain
+    .fancySelectToggle
+      span
+        display: inline-block
+        min-width: 50px
+    &.country-select
+      .fancySelectToggle
+        span
+          width: 160px
+  .select2-container
+    &.country-select
+      min-width: 200px
+
+  .alert
+    margin: -20px -20px 20px -20px
+    border-radius: 0
+    box-shadow: 0 1px 0 #fff
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: -1px
+      left: -1px
+      right: -1px
+      height: 5px
+      +background(linear-gradient(top, #eacccc, #f2dede))
+  .photo
+    height: 0
+    .attachment-set
+      position: relative
+      .attachment-button
+        display: block
+        position: relative
+        z-index: 1
+      .attachment-input
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 2
+        opacity: 0
+    .frame
+      line-height: 0
+      position: relative
+      margin-bottom: 10px
+      border: 1px solid #e3e8f0
+      border-top: 1px solid #edf1f5
+      border-bottom: 1px solid #b9c7dd
+      border-radius: 5px
+      padding: 4px
+      background: #fff
+      +box-shadow( 0 1px 1px rgba(#d7e1ec, 0.5))
+      &:before
+        content: ""
+        position: absolutm
+        top: 0px
+        left: 0
+        bottom: 0
+        right: 0
+        margin: 4px
+        box-shadow: inset 0 1px 2px rgba(#000, 0.1)
+      img
+        display: block
+        width: 90px
+        height: 90px
+        border: none
+        background: none
+        padding: 0
+        box-shadow: inset 0 1px 1px #b8cbe2
+    .btn
+      display: block
+      width: 100%
+      padding: 7px 0
+      box-sizing: border-box
+      margin-bottom: 8px
+  form
+    color: #a7bedb
+    overflow: visible
+    fieldset
+      margin-bottom: 20px
+      padding-bottom: 11px
+      background: image-url("shared/dashed-line.png") bottom left repeat-x
+    .control-group
+      margin-bottom: 10px
+      label
+        width: 90px
+        text-align: left
+        font-size: 13px
+      .control-label
+        padding-top: 2px
+
+      .controls
+        margin-left: 90px
+        padding-right: 30px
+        position: relative
+        &.address-field
+          margin-bottom: 10px
+        .fancy-select
+          margin-bottom: 5px
+        .icon-remove
+          position: absolute
+          top: 0
+          right: 0
+          padding: 8px
+        p
+          margin: 5px 0 0 0
+        .dropdown
+          .dropdown-toggle
+            >span
+              min-width: 50px
+        input, textarea, select
+          margin-bottom: 5px
+        input, textarea
+          vertical-align: top
+          resize : none
+          width: 186px
+          font-size: 13px
+          max-width: 186px
+          padding: 3px 6px
+          margin-right: 5px
+          text-shadow: none
+        .state
+          width: 100px
+          margin-right: 5px
+        .zip
+          width: 64px
+      .country-select
+        .dropdown-toggle
+          span
+            width: 145px
+    .action-bar
+      padding: 20px 0
+      margin-left: 120px
+  .media-body
+    margin-left: 120px
+#custom-fields
+  padding: 20px
+  color: #a7bedb
+  input
+    color: #5579b2
+    padding: 3px 6px
+    border: 1px solid #cbd6e6
+    box-shadow: 0 1px 0 #fff
+    width: 160px
+    &::-webkit-input-placeholder
+      color: #a7bedb
+    &:-moz-placeholder
+      color: #a7bedb
+    &::-moz-placeholder
+      color: #a7bedb
+    &:-ms-input-placeholder
+      color: #a7bedb
+  table
+    width: 100%
+    tr
+      td
+        width: 50%
+        form
+          .control-group
+            margin-bottom: 10px
+            label
+              width: 80px
+            .controls
+              margin-left: 90px
+
+#edit-custom-header
+  .mod-content
+    .hd
+      margin: 0 -20px
+    .bd
+      padding: 15px 0
+      margin-bottom: 0
+      color: #a7bedb
+      background: image-url("shared/dashed-line.png") bottom left repeat-x
+      .control-group
+        display: inline-block
+        width: 270px
+        label
+          float: left
+          width: 100px
+          padding-top: 5px
+          text-align: right
+        .controls
+          margin-left: 120px
+          padding-right: 16px
+          input
+            width: 100%
+            color: #5579b2
+            padding: 3px 6px
+            border: 1px solid #cbd6e6
+            &::-webkit-input-placeholder
+              color: #a7bedb
+            &:-moz-placeholder
+              color: #a7bedb
+            &::-moz-placeholder
+              color: #a7bedb
+            &:-ms-input-placeholder
+              color: #a7bedb
