@@ -13,3 +13,4 @@ Gemfile.lock
 tmp/
 test/screenshots/
 test/dummy/log/test.log
+.DS_Store

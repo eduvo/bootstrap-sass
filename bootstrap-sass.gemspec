@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
   s.license = "Apache 2.0"
 
   s.add_development_dependency 'compass'
+  s.add_development_dependency 'font-awesome-rails'
   s.add_development_dependency 'compass-rails', '~> 1.1.2'
   s.add_development_dependency 'term-ansicolor'
   s.add_development_dependency 'sass-rails', '>= 3.2'

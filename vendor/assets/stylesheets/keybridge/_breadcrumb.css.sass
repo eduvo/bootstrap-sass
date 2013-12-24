@@ -1,0 +1,42 @@
+@import compass/css3/images
+@import compass/css3/user-interface
+@import compass/utilities/sprites
+@import keybridge/shared/*.png
+
+#breadcrumb
+  +background-image(linear-gradient(top, white, #e9eff6))
+  position: relative
+  &:after
+    content: ""
+    position: absolute
+    bottom: -6px
+    left: 0
+    right: 0
+    height: 6px
+    +background-image(linear-gradient(top, #dbe2ed, rgba(#dbe2ed, 0)))
+  height: auto
+  .bd
+    border-bottom: solid 1px #c0d0e7
+    padding: 7px 10px 4px
+    .actions
+      a.total-value
+        color: #3284eb
+        margin: 0 5px
+        cursor: default
+        +user-select(text)
+        &:hover
+          color: #3284eb!important
+      a.danger:link,
+      a.danger:visited,
+        margin-left: 2px
+        font-size: 13px
+        padding: 5px
+        color: #e25550 !important
+      span.subscription-status
+        color: #a7bedb
+        display: inline-block
+        font-weight: bold
+        margin: 5px 5px 0 0
+        text-shadow: 0 1px 0 white
+      .filter
+        margin-bottom: 3px
