@@ -3,6 +3,28 @@
 
 .kbicon
   display: inline-block
+  width: 16px
+  height: 16px
+  &.kbicon-active
+    width: 16px
+    height: 17px
+    +icons-sprite(icon_active)
+  &.kbicon-cup
+    width: 16px
+    height: 16px
+    +icons-sprite(icon_cup)
+  &.kbicon-export
+    width: 15px
+    height: 14px
+    +icons-sprite(icon_export)
+  &.kbicon-table
+    width: 17px
+    height: 14px
+    +icons-sprite(icon_table)
+  &.kbicon-tel
+    width: 16px
+    height: 12px
+    +icons-sprite(icon_tel)
   &.kbicon-cal
     width: 16px
     height: 17px
@@ -36,4 +58,10 @@
     width: 16px
     height: 16px
     +icons-sprite(icon_key_smaller)
+  &.kbicon-pen
+    width: 16px
+    height: 16px
+    +icons-sprite(icon_pen)
+    &:active, &:focus
+      +icons-sprite(icon_pen_active)
 
