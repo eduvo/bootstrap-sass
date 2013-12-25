@@ -248,8 +248,16 @@ hr.top-shadow
       top: 0
       left: 0
       right: 0
-      height: 10px
-      +background(linear-gradient(top, rgba(#5378b4, 0.1), rgba(#5378b4, 0)))
+      height: 5px
+      +background(linear-gradient(top, rgba(#5378b4, 0.2), rgba(#5378b4, 0)))
+    &:after
+      content: ''
+      position: absolute
+      bottom: -2px
+      left: 0
+      right: 0
+      height: 1px
+      background: #fff
     .title
       height: 20px
       display: inline-block

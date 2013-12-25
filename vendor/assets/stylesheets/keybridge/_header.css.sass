@@ -3,6 +3,7 @@
 @import compass/css3/transform
 @import compass/css3/transition
 @import compass/utilities/sprites
+@import keybridge/theme
 @import keybridge/header/*.png
 @import keybridge/shared/*.png
 $search-result-width: 400px
@@ -37,14 +38,16 @@ $search-result-width: 400px
     color: #5579B2
     text-align: left
     text-shadow: 0 1px 0 #fff
+    line-height: 1.1
     box-shadow: none
     .company
-      color: #b0bdd1
-      margin-top: 5px
+      line-height: 1
+      margin-left: -3px
+      color: #81ade7
       span
         display: inline-block
         vertical-align: middle
-    .icon-chevron-down
+    .fa-chevron-down
       position: absolute
       right: 8px
       top: 50%
@@ -57,7 +60,7 @@ $search-result-width: 400px
       vertical-align: middle
       opacity: 0
       &:before
-        content: "\f053"
+        content: '\f053'
     img
       height: 30px
       width: auto
@@ -67,7 +70,7 @@ $search-result-width: 400px
       +background-image(linear-gradient(top, white, #dde6f1))
       background: image-url("ie-bg/bg-logo-switchbtn.png") bottom left repeat-x\0
       box-shadow: inset 0 1px 0 #fff, 0 1px 3px #DDE6F1
-      .icon-chevron-down
+      .fa-chevron-down
         opacity: 1
   &:active
     #logo
@@ -239,13 +242,13 @@ $search-result-width: 400px
   vertical-align: middle
   position: relative
   background: #FC5453
-  padding: 5px 7px
+  padding: 0 7px
   border-radius: 3px
   font-size: 10px
-  height: 5px
+  height: 15px
   border: 1px solid #FC4A4A
   color: #fff
-  line-height: 5px
+  line-height: 15px
   +background-image(linear-gradient(top, #fc615f, #fc4a4a))
   box-shadow: inset 0 1px rgba(white, 0.3)
   &:after

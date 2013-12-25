@@ -1,10 +1,27 @@
 @import compass/utilities/sprites
 @import keybridge/icons/icon_*.png
+@import keybridge/icons/product/icon_*.png
 
 .kbicon
   display: inline-block
   width: 16px
   height: 16px
+  &.kbicon-product-oa
+    width: 40px
+    height: 40px
+    +product-sprite(icon_oa_small)
+  &.kbicon-product-mb
+    width: 40px
+    height: 40px
+    +product-sprite(icon_mb_small)
+  &.kbicon-product-device
+    width: 40px
+    height: 40px
+    +product-sprite(icon_device_small)
+  &.kbicon-clock
+    width: 16px
+    height: 17px
+    +icons-sprite(icon_clock)
   &.kbicon-active
     width: 16px
     height: 17px
