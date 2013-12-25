@@ -1,0 +1,102 @@
+@import compass/css3/border-radius
+@import compass/css3/images
+@import compass/css3/box-sizing
+@import compass/css3/box-shadow
+@import keybridge/shared/*.png
+
+.bootstrap-datetimepicker-widget
+  padding: 0
+  ul
+    li
+      &.collapse
+        &.in + .picker-switch
+          a
+            min-width: 100px
+            min-height: 12px
+            margin: -1px -1px 0 -1px
+            border: 1px solid #adb0b5
+            border-top: 1px solid #bdcfe5
+            border-bottom: none
+            +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+            +border-radius(0 0 4px 4px)
+            +box-shadow(inset 0 1px 0 #fff)
+            +box-sizing(border-box)
+            color: #a6bedc
+            padding: 6px 10px
+            text-shadow: 0 1px 0px #fff
+        & + .picker-switch
+          a
+            border: 1px solid #1c3a69
+            border-top: 1px solid #4569a3
+            border-bottom: 1px solid #0f2b57
+            background: image-url("ie-bg/bg-datepicker.png") bottom left repeat-x\0
+            +background-image(linear-gradient(top, #5478b1, #163b74))
+            +border-radius(4px 4px 0 0)
+            +box-shadow(inset 0 1px 0 #769ad1)
+            +box-sizing(border-box)
+            color: #fff
+            text-shadow: 0 -1px 1px #0f2b57
+  &:after
+    display: none
+  &:before
+    content: ''
+    position: absolute
+    top: -7px
+    left: 50%
+    width: 11px
+    margin-left: -6px
+    height: 9px
+    border: none
+    +shared-sprite(date-picker-top)
+  .datepicker-days
+    margin-right: -1px
+  .datepicker
+    display: block
+    table
+      +border-radius(0)
+      padding: 0
+      border-bottom-width: 1px
+      thead
+        th:hover
+          background-color: transparent
+  .dropdown-menu li > a:hover,
+  .dropdown-menu li:hover > a,
+  .dropdown-submenu:hover > a
+    background: #0081c2 !important
+  th, td
+    +border-radius(0)
+  .timepicker-picker
+    tbody
+      tr
+        th, td
+          padding: 0
+          +border-radius(0)
+          span, .timepicker-hour, .timepicker-minute, .timepicker-second
+            display: block
+            width: auto
+            margin: 5px
+            float: none
+          .btn
+            width: 20px
+          &.separator
+            width: 5px
+        &:first-child
+          td
+            padding-top: 10px
+        &:last-child
+          td
+            padding-bottom: 10px
+  thead th:hover
+    background: none
+  .dropdown-menu li > a:hover
+    background-color: none !important
+    background-repeat: none
+    background-image: none !important
+  .datepicker th
+    padding: 5px
+  .datepicker thead tr:first-child th:first-child
+    +border-top-left-radius(20px)
+  .datepicker thead tr:first-child th:last-child
+    +border-top-right-radius(8px)
+
+

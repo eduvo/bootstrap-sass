@@ -1,0 +1,108 @@
+/**
+ * Keybridge Reusable CSS Layout.
+ *
+ * .grid-full    - 1 column
+ * .grid-nav     - 2 columns
+ * .grid-compact - 3 columns
+ */
+
+@import compass/css3/box-sizing
+@import compass/css3/user-interface
+
+$width       : 65%
+$min-width   : 980px
+$aside-width : 220px
+$nav-width   : 160px
+$help-support-nav-width   : 200px
+
+.grid, .grid-full
+  width: $width
+  min-width: $min-width
+  margin: 0 auto
+  #hd, #bd, #ft
+    zoom: 1
+    &:after
+      content: ''
+      display: block
+      clear: both
+
+.grid-nav
+  @extend .grid-full
+  #bd
+    .grid-b
+      float: left
+      width: $nav-width
+    .grid-main
+      background: #dde4ee
+      float: right
+      margin-left: -($nav-width)
+      width: 100%
+      +box-sizing(border-box)
+      border-bottom-left-radius: 5px
+      border-bottom-right-radius: 5px
+      .grid-b
+        margin-left: $nav-width
+        float: none
+        width: auto
+
+body.help_support
+  .grid-nav
+    #bd
+      .grid-b
+        width: $help-support-nav-width
+      .grid-main
+        margin-left: -($help-support-nav-width)
+        .grid-b
+          margin-left: $help-support-nav-width
+          width: auto
+
+.grid-compact
+  @extend .grid-nav
+  #bd
+    .grid-u
+      float: right
+      width: $aside-width
+    .grid-primary
+      background: #eaeef4
+      float: left
+      margin-right: -($aside-width)
+      width: 100%
+      .grid-u
+        margin-right: $aside-width
+        float: none
+        width: auto
+
+.grid-devise
+  overflow: hidden
+  position: fixed
+  +user-select(none)
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  text-align: center
+  white-space: nowrap
+  &:before
+    content: ''
+    display: inline-block
+    *display: inline
+    *zoom: 1
+    height: 100%
+    vertical-align: middle
+  .grid-content
+    display: inline-block
+    *display: inline
+    *zoom: 1
+    vertical-align: middle
+    text-align: left
+    width: 485px
+    white-space: normal
+
+.grid-message
+  .grid-content
+    padding: 130px 0 30px
+    vertical-align: middle
+    text-align: left
+    width: 485px
+    margin: 0 auto
+    white-space: normal

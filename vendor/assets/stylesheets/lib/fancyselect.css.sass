@@ -1,0 +1,94 @@
+@import keybridge/theme
+@import compass
+@import compass/css3
+@import compass/css3/user-interface
+.fancy-select
+  display: none
+.fancySelectMain
+  +user-select(none)
+  font-family: "Helvetica Neue"
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  border: 1px solid #bfd0e5
+  border-radius: 5px
+  margin-right: 5px
+
+.fancySelectToggle
+  display: inline-block
+  white-space: nowrap
+  vertical-align: middle
+  border-radius: 4px
+  background: #fff
+  cursor: pointer
+  +background(linear-gradient(#fff 0%, #f3f7fb 70%, #fff 100%))
+  span
+    display: inline-block !important
+    vertical-align: middle
+    padding: 2px 12px
+    border-radius: 4px 0 0 4px
+    color: $lightenTextColor
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+    margin: auto !important
+  .btn
+    display: inline-block
+    color: #a7bedb
+    font-size: 11px
+    font-weight: bold
+    text-shadow: 0 1px 0 white
+    padding: 6px 7px
+    padding: 2px 9px \0
+    border: none
+    border-radius: 0 4px 4px 0
+    border-left: 1px solid #bfd0e5
+    margin-bottom: 0
+    i
+      width: inherit
+      height: inherit
+      display: inline-block
+      verticle-align: middle
+
+.fancySelectBody
+  position: absolute
+  padding-right: 10px
+  top: 100%
+  left: 0
+  z-index: 1000
+  display: none
+  min-width: 100%
+  padding: 0
+  margin: 2px 0 0
+  list-style: none
+  background-color: #fff
+  border: 1px solid #ccc
+  border: 1px solid rgba(0,0,0,0.2)
+  +border-radius(6px)
+  +box-shadow(0 5px 10px rgba(0,0,0,0.2))
+  +background-clip(padding-box)
+  li
+    white-space: nowrap
+    display: block
+    color: #5579b2
+    padding: 3px 5px
+    text-align: left
+    min-height: 20px
+    &:first-child
+      +border-top-left-radius(5px)
+      +border-top-right-radius(5px)
+    &:last-child
+      +border-bottom-left-radius(5px)
+      +border-bottom-right-radius(5px)
+    &.active
+      background: #E3EBF4
+    &:hover
+      border: 1px solid #1C59BD
+      +background-image(linear-gradient(top, #5091fa, #2972e8))
+      background: image-url("ie-bg/bg-dropdown-li.png") bottom left repeat-x\0
+      box-shadow: inset 0 1px 0 #87B4FC
+      color: #fff
+      margin: -1px
+      position: relative
+      z-index: 100
+      text-shadow: 0 1px 3px #2972E8

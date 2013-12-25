@@ -1,0 +1,264 @@
+@import compass/css3/transform
+@import compass/utilities/sprites
+@import shared/*.png
+
+.inline-block
+  display: inline-block
+  *display: inline
+  *zoom: 1
+  vertical-align: middle
+
+i.icons-icon-pdf
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  margin-right: 5px
+  +shared-sprite(icon-pdf)
+
+i.icons-pdf-32x32
+  display: inline-block
+  vertical-align: middle
+  width: 32px
+  height: 32px
+  margin-right: 5px
+  +shared-sprite(file_extension_pdf)
+
+i.icons-icon-word
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  margin-right: 5px
+  +shared-sprite(icon-word)
+
+i.icons-icon-exl
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  margin-right: 5px
+  +shared-sprite(icon-excel)
+
+i.icons-icon-doc
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  margin-right: 5px
+  +shared-sprite(icon-doc)
+
+i.icons-icon-xero
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  margin-right: 5px
+  +shared-sprite(icon-xero)
+
+span.waterfall-icon-email-act
+  width: 16px
+  height: 16px
+  margin-right: 5px
+
+i.icons-paper-clips
+  width: 16px
+  height: 16px
+  margin: 0px
+  display: inline-block
+  vertical-align: middle
+  display: inline-block
+  +shared-sprite(icon-paper-clips)
+
+i.icons-pen
+  position: relative
+  display: inline-block !important
+  width: 16px
+  height: 16px
+  &:before
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-left: -8px
+    margin-top: -8px
+    width: 16px
+    height: 16px
+    +shared-sprite(icon-pen)
+
+i.icons-trash
+  position: relative
+  display: inline-block !important
+  width: 16px
+  height: 16px
+  &:before
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-left: -8px
+    margin-top: -8px
+    width: 16px
+    height: 16px
+    +shared-sprite(icon_trash)
+
+.abs-r .btn [class^="icon-"],.abs-r .btn [class*=" icon-"]
+  display: inline-block
+  vertical-align: middle
+
+.menu-icon
+  display: inline-block
+  vertical-align: middle
+  width: 24px
+  height: 24px
+  margin-right: 8px
+.icon-dashboards
+  @extend .menu-icon
+.icon-contacts
+  @extend .menu-icon
+.icon-payments
+  @extend .menu-icon
+.icon-analytics
+  @extend .menu-icon
+.icon-reporting
+  @extend .menu-icon
+.icon-lifecycle
+  @extend .menu-icon
+.icon-mailings
+  @extend .menu-icon
+.icon-intelligence
+  @extend .menu-icon
+.icon-mb
+  display: inline-block
+  vertical-align: middle
+  width: 18px
+  height: 18px
+.icon-oa
+  display: inline-block
+  vertical-align: middle
+  width: 18px
+  height: 18px
+.icon-ks
+  display: inline-block
+  vertical-align: middle
+  width: 18px
+  height: 18px
+.icon-ur
+  display: inline-block
+  vertical-align: middle
+  width: 18px
+  height: 18px
+.icon-building
+  display: inline-block
+  vertical-align: middle
+  width: 18px
+  height: 18px
+
+i.icon-pen
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  &.active
+    +shared-sprite(icon-pen-active)
+
+i.icon-preferences
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  +shared-sprite(icon-preferences)
+
+i.icon-contacts-mini
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  +shared-sprite(icon-journal)
+
+i.icon-email-mini
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  +shared-sprite(icon-mail-active)
+
+i.icon-call-mini
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  +shared-sprite(icon-call-small-active)
+
+i.icon-file-mini
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  +shared-sprite(icon-file-small-active)
+
+i.icon-note-mini
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  +shared-sprite(icon-note-small-active)
+
+i.icon-agreement-mini
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  +shared-sprite(icon-agreement-small-active)
+
+i.icon-individual-mini
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  +shared-sprite(icon_contact)
+
+i.icon-company-mini
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  +shared-sprite(icon_organization)
+
+i.icon-emailsent-mini
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  +shared-sprite(icon-email-mini)
+
+i.icon-callsingle-mini
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  +shared-sprite(icon-call-single-mini)
+
+i.icon-callmulti-mini
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  +shared-sprite(icon-call-multi-mini)
+i.icon-print
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  +shared-sprite(icon-print)
+
+.expand-toggle-icon
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+  +shared-sprite(expand-toggle-icon)
+#column-control
+  &.expand
+    .expand-toggle-icon
+      +transform(rotate(180deg))

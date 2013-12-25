@@ -24,6 +24,10 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'jquery-rails'
   s.add_development_dependency 'slim-rails'
 
+  s.add_runtime_dependency 'select2-rails'
+  s.add_runtime_dependency 'bootstrap-datepicker-rails'
+  s.add_runtime_dependency 'bootstrap-datetimepicker-rails'
+
   s.files      = `git ls-files`.split("\n")
   s.test_files = `git ls-files -- test/*`.split("\n")
 end

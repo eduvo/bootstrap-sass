@@ -1,0 +1,472 @@
+@import shared/theme
+@import compass/css3/images
+@import compass/css3/border-radius
+@import compass/css3/box-shadow
+@import compass/css3/box-sizing
+@import compass/css3/user-interface
+
+body
+  //Disable
+  //+user-select(none)
+  background: #f4f8ff
+  font-family: 'HelveticaNeue', 'Helvetica Neue Medium', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif
+a:link, a:visited
+  color: #5377b3
+  text-decoration: none
+a.btn:hover
+  color: #769ad1
+a.btn,
+a.btn:link,
+a.btn:visited
+  color: #a6bedc
+a:hover,
+a.btn:hover
+  color: #769ad1 !important
+// FIXME
+a.btn-primary,
+a.btn-info
+  color: #fff !important
+a.btn-primary:hover,
+a.btn-info:hover
+  color: #fff !important
+label abbr
+  display: none
+ul, ol
+  list-style-type: none
+  margin: 0
+h1, h2, h3, h4, h5, h6
+  font-weight: normal
+  font-size: 100%
+input[type=text],
+input[type=tel],
+input[type=number],
+input[type=email],
+input[type=date],
+input[type=password],
+textarea
+  border: 1px solid #cbd6e6
+  color: #5579b2
+  &::-webkit-input-placeholder
+    color: #a7bedb
+  &:-moz-placeholder
+    color: #a7bedb
+  &::-moz-placeholder
+    color: #a7bedb
+  &:-ms-input-placeholder
+    color: #a7bedb
+  &:focus
+    border: 1px solid #3284eb
+.h100
+  height: 100%
+  display: inline-block
+  vertical-align: middle
+
+.mini
+  font-size: 11px
+.small
+  font-size: 12px
+.med-small
+  font-size: 13px
+.medium
+  font-size: 14px
+  font-weight: bold
+.med-large
+  font-size: 16px
+.large
+  font-size: 18px
+.x-large
+  font-size: 18px
+  font-weight: bold
+.x2-large
+  font-size: 22px
+  font-weight: bold
+.x3-large
+  font-size: 28px
+.x4-large
+  font-size: 28px
+  font-weight: bold
+
+.small-bd
+  font-size: 12px
+  font-weight: bold
+
+input, textarea
+  &:focus
+    &::-webkit-input-placeholder
+      opacity: 0
+    &:-moz-placeholder
+      opacity: 0
+    &::-moz-placeholder
+      opacity: 0
+    &:-ms-input-placeholder
+      opacity: 0
+
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-outer-spin-button,
+input[type=date]::-webkit-calendar-picker-indicator,
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+.poptop
+  .textarea-right.select
+    width: 100%
+    .chzn-container
+      margin: 0
+      padding: 0
+      .chzn-choices
+        margin: 0
+        border: none
+        li.search-field
+          border-bottom: none
+          input
+            height: 34px
+            &::-webkit-input-placeholder
+              color: #9F9999
+            &:-moz-placeholder
+              color: #9F9999
+            &::-moz-placeholder
+              color: #9F9999
+            &:-ms-input-placeholder
+              color: #9F9999
+
+hr.dashed
+  height: 1px
+  border: none
+  background: image-url("shared/dashed-line.png") bottom left repeat-x
+
+.bar
+  position: relative
+  text-align: left
+  padding: 10px 20px
+  +background-image(linear-gradient(top, white, #e9eff6))
+  background: image-url("ie-bg/bg-primary-header.png") bottom left repeat-x\0
+  border-bottom: 1px solid #BDCFE5
+  border-top: 1px solid #dde4ee
+  margin-top: -1px
+  h3
+    display: inline-block
+    margin: 0
+    line-height: 1em
+    color: #5579B2
+    text-shadow: 0 1px 0 #fff
+  &.small
+    padding: 5px 20px
+  .pull-left
+    >*
+      vertical-align: middle
+
+.bar-shadow
+  position: relative
+  text-align: left
+  padding: 10px 20px
+  +background-image(linear-gradient(top, white, #e9eff6))
+  background: image-url("ie-bg/bg-primary-header.png") bottom left repeat-x\0
+  border-bottom: 1px solid #BDCFE5
+  border-top: 1px solid #dde4ee
+  margin-top: -1px
+  &:before
+    content: ""
+    position: absolute
+    top: 100%
+    left: 0
+    right: 0
+    height: 6px
+    +background-image(linear-gradient(top, rgba(#dbe2ed, 1), rgba(#dbe2ed, 0)))
+  h3
+    display: inline-block
+    margin: 0
+    line-height: 1em
+    color: #5579B2
+    text-shadow: 0 1px 0 #fff
+  &.small
+    padding: 5px 20px
+  .pull-left
+    >*
+      vertical-align: middle
+
+hr.top-shadow
+  margin: 0
+  border: none
+  position: relative
+  &:before
+    content: ""
+    position: absolute
+    top: 100%
+    left: 0
+    right: 0
+    height: 6px
+    +background-image(linear-gradient(top, rgba(#dbe2ed, 1), rgba(#dbe2ed, 0)))
+
+hr.top-shadow
+  margin: 0
+  border: none
+  position: relative
+  &:before
+    content: ""
+    position: absolute
+    top: 100%
+    left: 0
+    right: 0
+    height: 6px
+    +background-image(linear-gradient(top, rgba(#dbe2ed, 1), rgba(#dbe2ed, 0)))
+
+/*
+ * .header-bar
+ * .header-bar-shadow
+ * .header-bar-compress
+ *
+ * ex. class="header-bar headerbar-shadow header-bar-compress"
+ */
+.header-bar
+  position: relative
+  text-align: left
+  padding: 5px 10px
+  box-sizing: border-box
+  min-height: 40px
+  +background-image(linear-gradient(top, white, #e9eff6))
+  background: image-url("ie-bg/bg-primary-header.png") bottom left repeat-x\0
+  border-bottom: 1px solid #BDCFE5
+  border-top: 1px solid #dde4ee
+  margin-top: -1px
+  .title
+    height: 28px
+    display: inline-block
+    vertical-align: middle
+    margin: 0
+    line-height: 1em
+    color: #5579B2
+    text-shadow: 0 1px 0 #fff
+    font-weight: bold
+    padding: 0
+    &:before
+      content: ''
+      height: 100%
+      display: inline-block
+      vertical-align: middle
+  &.header-bar-compress
+    padding: 5px 10px
+    box-sizing: border-box
+    min-height: 30px
+    height: 30px
+    .title
+      height: 20px
+  &.header-bar-shadow
+    &:before
+      content: ""
+      position: absolute
+      bottom: -7px
+      left: 0
+      right: 0
+      height: 6px
+      +background-image(linear-gradient(top, rgba(#dbe2ed, 1), rgba(#dbe2ed, 0)))
+
+table.data-grid
+  width: 100%
+  >tbody, >thead
+    >tr
+      >th
+        padding: 4px 10px
+        color: $darkenTextColor
+        text-shadow: 0 1px 0 #fff
+        text-align: center
+        border: 1px solid #dde4ee
+        border-bottom: 1px solid $darkenBorder
+        border-left: none
+        +background-image(linear-gradient(top, white, #e9eff6))
+        &:last-child
+          text-align: center
+        &.inputs, &.numbers
+          width: 70px
+      >td
+        padding: 10px
+        vertical-align: top
+        color: $darkenTextColor
+        text-align: center
+        border-bottom: 1px solid lighten($baseTextColor, 25%)
+    &:nth-child(odd)
+      tr
+        &:nth-child(odd)
+          td
+            background: #fbfcfd
+    &:nth-child(even)
+      tr
+        &:nth-child(even)
+          td
+            background: #fbfcfd
+  &.mod-table
+    border-radius: 5px
+    border-collapse: separate
+    border-spacing: 0
+    border: 1px solid #dde4ee
+    td, th
+      text-align: left
+    thead
+      tr
+        &:first-child
+          th
+            border-top: none
+            &:first-child
+              border-top-left-radius: 5px
+            &:last-child
+              border-top-right-radius: 5px
+              border-right: none
+    tbody
+      tr
+        &:last-child
+          td
+            border-bottom: none
+.label-drop
+  display: inline-block
+  height: 24px
+  border: 1px solid #bed0e4
+  border-top: 1px solid #c0d0e5
+  border-bottom: 1px solid #bfd0e6
+  background: #fff
+  +border-radius(4px)
+  +box-shadow( 0 1px 1px rgba(#bdcfe6, 0.5))
+  .label
+    display: inline-block
+    background: none
+    overflow: hidden
+    color: #a7bedb
+    padding: 0 30px 0 12px
+    text-overflow: ellipsis
+    white-space: nowrap
+    vertical-align: middle
+    border: none
+    +box-sizing(border-box)
+  .arrow
+    display: inline-block
+    color: #a7bedb
+    font-size: 11px
+    font-weight: bold
+    height: 100%
+    width: 26px
+    padding: 0
+    border: none
+    border-left: 1px solid #bccde3
+    +border-radius(0 4px 4px 0)
+    +box-shadow(inset 1px 1px 0 rgba(#fff, 0.7), inset 0 0 2px rgba(#fff, 1))
+    text-align: center
+    text-shadow: 0 1px 0 white
+    vertical-align: middle
+    &:before
+      content: ''
+      display: inline-block
+      vertical-align: middle
+      height: 100%
+    i
+      padding: 5px 4px 0 0
+      display: inline-block
+
+/* Supports loading overlay */
+.loading
+  .bd
+    position: relative
+    &::before, &::after
+      content: ''
+      position: absolute
+      z-index: 1
+    &::before
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      background: rgba(255,255,255,0.6)
+    &::after
+      content: ''
+      width: 32px
+      height: 32px
+      background: asset-data-url('shared/ajax-loader.gif') 0 0 no-repeat
+      left: 50%
+      top: 50%
+      margin-top: -32px * .5
+      margin-left: -32px * .5
+      z-index: 1
+
+/* for isis */
+$tagBgGender: #bf6ed1
+$tagBgGenderLight: #d9cae7
+$tagBgClasses: #7d9d3f
+$tagBgClassesLight: #d4decf
+$tagBgGrade: #3284eb
+$tagBgGradeLight: #c4d8f3
+
+.tag-isis
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  background: #ccc
+  padding: 0 10px
+  height: 20px
+  line-height: 20px
+  font-size: 12px
+  color: #666
+  margin-left: 10px
+  border: 1px solid #999
+  border-left: none
+  +border-radius( 4px)
+  +box-sizing(border-box)
+  i
+    position: absolute
+    top: 50%
+    margin-top: -2px
+    left: 0
+    width: 2px
+    height: 2px
+    background: #fff
+    +border-radius(5px)
+    border: 1px solid #999
+    z-index: 4
+  &:before
+    content: ''
+    position: absolute
+    top: 1px
+    height: 2px
+    left: -7px
+    border-top: 7px solid transparent
+    border-bottom: 7px solid transparent
+    border-right: 8px solid #ccc
+    z-index: 3
+  &:after
+    content: ''
+    position: absolute
+    top: 0px
+    left: -8px
+    height: 2px
+    border-top: 8px solid transparent
+    border-bottom: 8px solid transparent
+    border-right: 9px solid #999
+    z-index: 2
+  &.gender
+    background: $tagBgGenderLight
+    border-color: $tagBgGender
+    color: $tagBgGender
+    i
+      border-color: $tagBgGender
+    &:before
+      border-right-color:  $tagBgGenderLight
+    &:after
+      border-right-color: $tagBgGender
+  &.classes
+    background: $tagBgClassesLight
+    border-color: $tagBgClasses
+    color: $tagBgClasses
+    i
+      border-color: $tagBgClasses
+    &:before
+      border-right-color:  $tagBgClassesLight
+    &:after
+      border-right-color: $tagBgClasses
+  &.grade
+    background: $tagBgGradeLight
+    border-color: $tagBgGrade
+    color: $tagBgGrade
+    i
+      border-color: $tagBgGrade
+    &:before
+      border-right-color:  $tagBgGradeLight
+    &:after
+      border-right-color: $tagBgGrade

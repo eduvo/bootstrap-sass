@@ -1,0 +1,223 @@
+@import keybridge/theme
+@import compass/css3/images
+@import compass/css3/border-radius
+@import compass/css3/box-shadow
+@import compass/css3/images
+@import compass/utilities/sprites
+@import keybridge/shared/*.png
+
+.select2-container
+  color: #a7bedb
+  font-size: 12px
+  &.select2-container-active
+    +border-radius( 5px)
+    +box-shadow( 0 0 8px rgba(82, 168, 236, 0.6))
+  .select2-choice
+    +background(linear-gradient(#fff 0%, #f3f7fb 70%, #fff 100%))
+    border: 1px solid #afc4df
+    border-top: 1px solid #bfd0e5
+    border-bottom: 1px solid #a7bedb
+    .select2-search-choice-close
+      color: #a7bedb
+      width: 10px
+      height: 10px
+      right: 34px
+      top: 9px
+      background: image-url('chosen-sprite.png') right top no-repeat
+    .select2-chosen
+      color: $lightenTextColor
+      padding: 0 6px
+    &:visited, &:link
+      color: #5579b2
+    span.select2-arrow
+      +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+      +box-shadow(inset 1px 1px 0 rgba(#fff, 0.5),inset 0px 1px 0 #fff)
+      border-left: 1px solid #bfd0e5
+      font-size: 10px
+      text-align: center
+      width: 24px
+      b
+        text-shadow: 0 1px 0 white
+        color: #a7bedb
+        font-family: FontAwesome
+        background: none!important
+        &:before
+          content: "\f078"
+          text-decoration: inherit
+          display: inline-block
+          speak: none
+.select2-container-multi
+  .select2-choices
+    background: #f7f9fd
+    border: 1px solid #c6d0db
+    box-shadow: 0 1px 0 white, inset 0 2px 3px #e0e6f0
+    border-radius: 4px
+    width: auto
+    color: #5579b2
+    .select2-search-choice
+      padding: 5px
+      padding-left: 18px
+      margin: 3px 0 0 5px
+      background: #E5ECF4
+      background: image-url("pages-selector-btn-bg.png") top left repeat-x\0
+      +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+      box-shadow: inset 0 0 1px #fff, inset 0 1px 0 #fff
+      border: 1px solid #bed0e6
+      border-top: 1px solid #bdcfe5
+      border-bottom: 1px solid #a6bedd
+      border-radius: 4px
+      color: #a6bedc
+      font-size: 12px
+      line-height: 1em
+      text-shadow: 0 1px 0 #fff
+      a
+        font-size: 12px
+        background: none !important
+        font-family: FontAwesome
+        font-weight: normal
+        font-style: normal
+        text-decoration: inherit
+        -webkit-font-smoothing: antialiased
+        &:before
+          content: '\f00d'
+          position: absolute
+          left: 2px
+          top: 1px
+          color: #a6bedc
+  .select2-default
+    color: #aac1dc!important
+.select2-drop
+  color: #5579b2
+  font-size: 12px
+  border: 1px solid rgba(#000 , 0.2)
+  margin-top: 20px
+  border-radius: 0 0 5px 5px
+  padding-top: 0
+  &:before
+    content: ""
+    position: absolute
+    top: -12px
+    left: -1px
+    right: -1px
+    height: 12px
+    +background-image(linear-gradient(top, #5478b1, #163b74))
+    background: image-url("ie-bg/bg-datepicker.png") bottom left repeat-x\0
+    border-radius: 4px 4px 0 0
+    border: 1px solid #1C3A69
+    border-top: 1px solid #4569A3
+    border-bottom: 1px solid #0F2B57
+    box-shadow: inset 0 1px 0 #769AD1
+    box-sizing: border-box
+  &:after
+    content: ""
+    position: absolute
+    top: -19px
+    right: 50%
+    width: 11px
+    height: 9px
+    margin-right: -5px
+    +shared-sprite(date-picker-top)
+  &.select2-drop-above
+    margin-top: -20px
+    border-top: 1px solid #cccccc!important
+    +box-shadow(0 4px 5px rgba(0, 0, 0, 0.15))
+    +border-radius(5px 5px 0 0)
+    .select2-search
+      +border-radius(5px 5px 0 0)
+    &:before
+      content: ""
+      position: absolute
+      top: auto
+      bottom: -12px
+      left: -1px
+      right: -1px
+      height: 12px
+      +background-image(linear-gradient(top, #163b74, #5478b1))
+      background: image-url("ie-bg/bg-datepicker.png") bottom left repeat-x\0
+      +border-radius( 0 0 4px 4px)
+      border: 1px solid #1C3A69
+      border-bottom: 1px solid #4569A3
+      border-top: 1px solid #0F2B57
+      box-shadow: inset 0 -1px 0 #769AD1
+      box-sizing: border-box
+    &:after
+      content: ""
+      position: absolute
+      top: auto
+      bottom: -19px
+      right: 50%
+      width: 11px
+      height: 9px
+      margin-right: -5px
+      background: image-url('shared/date-picker-bottom.png') bottom center
+
+.select2-dropdown-open
+  &.select2-drop-above
+    .select2-choice
+      border: 1px solid #afc4df
+      border-top: 1px solid #bfd0e5
+      border-bottom: 1px solid #a7bedb
+
+.select2-results
+  padding: 0
+  margin: 0
+    padding: 10px
+  >li.select2-highlighted
+    background: none
+    .select2-result-label
+      background: #E9F2FC
+      color: $baseTextColor
+  >li
+    padding: 0
+    border: 1px solid #d7e3f3
+    border-top: none
+    border: none
+    .select2-result-label
+      cursor: pointer
+      margin: 0
+      padding: 5px 8px
+      border-top: 1px solid #fff
+      border-bottom: 1px solid #D7E3F3
+      color: $darkenTextColor
+    &:hover
+      background: none
+      margin: 0px
+      .select2-result-label
+        border-top: 1px solid #E9F2FC
+        background: #E9F2FC
+        text-shadow: none
+        color: $baseTextColor
+    &:first-child
+      +border-radius(0)
+      a
+        +border-radius(0)
+    &:last-child
+      +border-radius(0 0 5px 5px)
+      a
+        border-bottom: none
+        +border-radius(0 0 5px 5px)
+  .select2-no-results
+    padding: 10px
+.select2-dropdown-open
+  .select2-choice
+    background: #f8f9fa
+    +border-radius(4px!important)
+.select2-container-active
+  .select2-choice
+    +box-shadow(none)
+.select2-drop
+  .select2-search
+    padding: 6px 4px
+    +background-image(linear-gradient(top, white, #e9eff6))
+    background: image-url("ie-bg/bg-primary-header.png") bottom left repeat-x\0
+    border-bottom: 1px solid #BDCFE5
+    border-top: 1px solid #dde4ee
+    margin-top: -1px
+    input
+      background: #fff
+      border: 1px solid #c6d0db
+      box-shadow: 0 1px 0 white, inset 0 2px 3px #e0e6f0
+      border-radius: 24px
+      color: #5579b2
+      margin-top: 0
+      line-height: 12px

@@ -1,0 +1,33 @@
+@import compass/css3/box-shadow
+@import compass/css3/images
+
+.ui-autocomplete
+  padding: 0
+  border: 1px solid rgba(0, 0, 0, 0.2)
+  +box-shadow(0 5px 10px rgba(0, 0, 0, 0.2))
+  >li
+    &:first-child
+      a
+        border-top-left-radius: 5px
+        border-top-right-radius: 5px
+    &:last-child
+      a
+        border-bottom-left-radius: 5px
+        border-bottom-right-radius: 5px
+    a
+      color: #5579B2
+      padding: 3px 5px
+      text-align: left
+      background: none
+      border-radius: 0px
+      font-size: 10px
+      &:hover, &.ui-state-focus
+        border: 1px solid #1C59BD
+        +background-image(linear-gradient(top, #5091fa, #2972e8))
+        background: image-url("ie-bg/bg-dropdown-li.png") bottom left repeat-x\0
+        box-shadow: inset 0 1px 0 #87B4FC
+        color: #fff
+        margin: -1px
+        position: relative
+        z-index: 100
+        text-shadow: 0 1px 3px #2972E8

@@ -1,0 +1,84 @@
+@import keybridge/theme
+@import compass/utilities/sprites
+@import compass/css3/images
+@import compass/css3/border-radius
+@import compass/css3/box-shadow
+@import keybridge/shared/*.png
+
+.datepicker-dropdown
+  &.datepicker-orient-top:before,
+  &.datepicker-orient-top:after,
+  &.datepicker-orient-bottom:before,
+  &.datepicker-orient-bottom:after
+    top: -1000em
+    border: none
+
+.datepicker
+  display: none
+  margin: 9px 0 0 -40px
+  padding: 0
+  border: none
+  +border-radius(6px 6px 4px 4px)
+  +box-shadow(0 0 15px #bdcfe5)
+  table
+    border: 1px solid #bdcfe5
+    border-collapse: separate
+    border-spacing: 0
+    +border-radius(6px 6px 4px 4px)
+  th, td
+    +border-radius(0)
+  thead tr:last-child
+    background: #f3f6fa
+    color: #bdcfe5
+    text-shadow: 0 -1px 0 #fff
+    th
+      padding: 5px 0
+      border-bottom: 1px solid #bdcfe5
+      font-size: 10px
+  thead tr:first-child
+    padding: 6px 0
+    border: 1px solid #1c3a69
+    border-top-color: #4569a3
+    border-top-color: #0f2b57
+    background: image-url("ie-bg/bg-datepicker.png") bottom left repeat-x\0
+    color: #fff
+    text-shadow: 0 -1px 1px #0F2B57
+    font-size: 11px
+    +box-shadow(inset 0 1px 0 #769ad1)
+    +border-radius(4px 4px 0 0)
+    +background-image(linear-gradient(top, #5478b1, #163b74))
+    th
+      border-top: 1px solid #4569A3
+      border-bottom: 1px solid #0F2B57
+      &:first-child
+        border-top-left-radius: 4px
+      &:last-child
+        border-top-right-radius: 4px
+    th
+      &:hover
+        background: transparent
+      &:after
+        content: ''
+        position: absolute
+        top: -7px
+        left: 50%
+        width: 11px
+        margin-left: -5px
+        height: 9px
+        +shared-sprite(date-picker-top)
+  tbody
+    td
+      border: 1px solid #eaeef4
+      border-width: 0 1px 1px 0
+      font-size: 11px
+    tr
+      td
+        &:last-child
+          border-right: none
+      &:last-child
+        td
+          border-bottom: none
+          &:first-child
+            +border-bottom-left-radius(4px)
+          &:last-child
+            +border-bottom-right-radius(4px)
