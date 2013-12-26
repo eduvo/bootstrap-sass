@@ -8,6 +8,7 @@ module Bootstrap
         config = Compass::Configuration::Data.new("bootstrap-sass")
         config.images_path = Engine.root.join('vendor', 'assets', 'images').to_s
         config.sprite_load_path << Engine.root.join('vendor', 'assets', 'images').to_s
+        config.relative_assets = true
         Compass.add_configuration(config)
       end
     end
