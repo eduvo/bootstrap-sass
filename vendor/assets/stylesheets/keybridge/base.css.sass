@@ -186,94 +186,6 @@ hr.top-shadow
     height: 6px
     +background-image(linear-gradient(top, rgba(#dbe2ed, 1), rgba(#dbe2ed, 0)))
 
-/*
- * .header-bar
- * .header-bar-shadow
- * .header-bar-compress
- *
- * ex. class="header-bar headerbar-shadow header-bar-compress"
- */
-.header-bar
-  position: relative
-  text-align: left
-  padding: 5px 10px
-  box-sizing: border-box
-  min-height: 40px
-  +background-image(linear-gradient(top, white, #e9eff6))
-  background: image-url("ie-bg/bg-primary-header.png") bottom left repeat-x\0
-  border-bottom: 1px solid #BDCFE5
-  border-top: 1px solid #dde4ee
-  margin-top: -1px
-  .title
-    height: 28px
-    display: inline-block
-    vertical-align: middle
-    margin: 0
-    line-height: 1em
-    color: #5579B2
-    text-shadow: 0 1px 0 #fff
-    font-weight: bold
-    padding: 0
-    &:before
-      content: ''
-      height: 100%
-      display: inline-block
-      vertical-align: middle
-  &.header-bar-compress
-    padding: 5px 10px
-    box-sizing: border-box
-    min-height: 30px
-    height: 30px
-    .title
-      height: 20px
-  &.header-bar-shadow
-    &:before
-      content: ""
-      position: absolute
-      bottom: -7px
-      left: 0
-      right: 0
-      height: 6px
-      +background-image(linear-gradient(top, rgba(#dbe2ed, 1), rgba(#dbe2ed, 0)))
-  &.header-bar-inset
-    background: #eaeef4
-    border: none
-    border-bottom: solid 1px #dce4ef
-    padding: 7px 10px 3px
-    position: relative
-    min-height: 25px
-    &:before
-      content: ''
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
-      height: 5px
-      +background(linear-gradient(top, rgba(#5378b4, 0.2), rgba(#5378b4, 0)))
-    &:after
-      content: ''
-      position: absolute
-      bottom: -2px
-      left: 0
-      right: 0
-      height: 1px
-      background: #fff
-    .title
-      height: 20px
-      display: inline-block
-      vertical-align: middle
-      margin: 0
-      line-height: 1em
-      color: #5579B2
-      text-shadow: 0 1px 0 #fff
-      font-weight: bold
-      padding: 0
-      &:before
-        content: ''
-        height: 100%
-        display: inline-block
-        vertical-align: middle
-
 table.data-grid
   width: 100%
   >tbody, >thead
@@ -397,3 +309,9 @@ table.data-grid
       margin-top: -32px * .5
       margin-left: -32px * .5
 
+btn.active
+  border: 1px solid #b5c9e1
+  background: #d4dfed
+  box-shadow: inset 0 3px 5px #b5c7dc, 0 1px 0 white
+  color: #5d93d5
+  border: none

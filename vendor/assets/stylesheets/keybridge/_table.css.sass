@@ -1,0 +1,43 @@
+@import compass/css3/images
+@import keybridge/theme
+
+.table
+  width: 100%
+  >thead >tr >th
+    padding: 4px 10px
+    border: 1px solid #dde4ee
+    border-bottom: 1px solid $darkenBorder
+    border-left: none
+    font-weight: bold
+    color: $darkenTextColor
+    text-shadow: 0 1px 0 #fff
+    +background-image(linear-gradient(top, white, #e9eff6))
+  >tbody >tr >th,
+  >tbody >tr >td
+    padding: 10px
+    vertical-align: top
+    color: $darkenTextColor
+    border-bottom: 1px solid lighten($baseTextColor, 25%)
+
+.table > thead > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > th,
+.table > tbody > tr > td,
+.table > tfoot > tr > th,
+.table > tfoot > tr > td
+  border-top-color: #ebeff7
+  color: $darkenTextColor
+
+.table-striped > tbody > tr:nth-child(odd) > th,
+.table-striped > tbody > tr:nth-child(odd) > td
+  background: transparent
+
+.table-striped > tbody > tr:nth-child(odd)
+  background: #fcfcfc
+
+.table-striped > tbody > tr:hover
+  background: #f3f8fd
+
+.table-striped > tbody > tr.active
+  background: #ebf3fd
+
