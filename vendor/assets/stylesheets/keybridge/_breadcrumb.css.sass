@@ -6,6 +6,8 @@
 #breadcrumb
   +background-image(linear-gradient(top, white, #e9eff6))
   position: relative
+  height: auto
+  border-bottom: solid 1px #c0d0e7
   &:after
     content: ""
     position: absolute
@@ -14,10 +16,7 @@
     right: 0
     height: 6px
     +background-image(linear-gradient(top, #dbe2ed, rgba(#dbe2ed, 0)))
-  height: auto
   .bd
-    border-bottom: solid 1px #c0d0e7
-    padding: 7px 10px 4px
     .actions
       a.total-value
         color: #3284eb
