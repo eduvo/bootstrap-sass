@@ -1,6 +1,27 @@
+@import compass/utilities/sprites/base
 @import compass/utilities/sprites
 @import keybridge/icons/icon_*.png
 @import keybridge/icons/product/icon_*.png
+@import keybridge/icons/mini/*.png
+
+// Mini Icons
+.kbmicon
+  display: inline-block
+  width: 16px
+  height: 16px
+  vertical-align: middle
+  &.kbmicon-lock
+    +mini-sprite(lock)
+  &.kbmicon-unlock
+    +mini-sprite(unlock)
+  &.kbmicon-key
+    +mini-sprite(key)
+  &.kbmicon-male
+    width: 10px
+    +mini-sprite(male)
+  &.kbmicon-female
+    width: 10px
+    +mini-sprite(female)
 
 .kbicon
   display: inline-block
