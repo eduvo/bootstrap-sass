@@ -6,29 +6,11 @@
 @import compass/css3/user-interface
 
 body
-  //Disable
-  //+user-select(none)
   background: #f4f8ff
   font-family: 'HelveticaNeue', 'Helvetica Neue Medium', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif
 a:link, a:visited
   color: #5377b3
   text-decoration: none
-a.btn:hover
-  color: #769ad1
-a.btn,
-a.btn:link,
-a.btn:visited
-  color: #a6bedc
-a:hover,
-a.btn:hover
-  color: #769ad1 !important
-// FIXME
-a.btn-primary,
-a.btn-info
-  color: #fff !important
-a.btn-primary:hover,
-a.btn-info:hover
-  color: #fff !important
 label abbr
   display: none
 ul, ol
@@ -110,56 +92,6 @@ hr.dashed
   border: none
   background: image-url("shared/dashed-line.png") bottom left repeat-x
 
-.bar
-  position: relative
-  text-align: left
-  padding: 10px 20px
-  +background-image(linear-gradient(top, white, #e9eff6))
-  background: image-url("ie-bg/bg-primary-header.png") bottom left repeat-x\0
-  border-bottom: 1px solid #BDCFE5
-  border-top: 1px solid #dde4ee
-  margin-top: -1px
-  h3
-    display: inline-block
-    margin: 0
-    line-height: 1em
-    color: #5579B2
-    text-shadow: 0 1px 0 #fff
-  &.small
-    padding: 5px 20px
-  .pull-left
-    >*
-      vertical-align: middle
-
-.bar-shadow
-  position: relative
-  text-align: left
-  padding: 10px 20px
-  +background-image(linear-gradient(top, white, #e9eff6))
-  background: image-url("ie-bg/bg-primary-header.png") bottom left repeat-x\0
-  border-bottom: 1px solid #BDCFE5
-  border-top: 1px solid #dde4ee
-  margin-top: -1px
-  &:before
-    content: ""
-    position: absolute
-    top: 100%
-    left: 0
-    right: 0
-    height: 6px
-    +background-image(linear-gradient(top, rgba(#dbe2ed, 1), rgba(#dbe2ed, 0)))
-  h3
-    display: inline-block
-    margin: 0
-    line-height: 1em
-    color: #5579B2
-    text-shadow: 0 1px 0 #fff
-  &.small
-    padding: 5px 20px
-  .pull-left
-    >*
-      vertical-align: middle
-
 hr.top-shadow
   margin: 0
   border: none
@@ -186,61 +118,6 @@ hr.top-shadow
     height: 6px
     +background-image(linear-gradient(top, rgba(#dbe2ed, 1), rgba(#dbe2ed, 0)))
 
-table.data-grid
-  width: 100%
-  >tbody, >thead
-    >tr
-      >th
-        padding: 4px 10px
-        color: $darkenTextColor
-        text-shadow: 0 1px 0 #fff
-        text-align: center
-        border: 1px solid #dde4ee
-        border-bottom: 1px solid $darkenBorder
-        border-left: none
-        +background-image(linear-gradient(top, white, #e9eff6))
-        &:last-child
-          text-align: center
-        &.inputs, &.numbers
-          width: 70px
-      >td
-        padding: 10px
-        vertical-align: top
-        color: $darkenTextColor
-        text-align: center
-        border-bottom: 1px solid lighten($baseTextColor, 25%)
-    &:nth-child(odd)
-      tr
-        &:nth-child(odd)
-          td
-            background: #fbfcfd
-    &:nth-child(even)
-      tr
-        &:nth-child(even)
-          td
-            background: #fbfcfd
-  &.mod-table
-    border-radius: 5px
-    border-collapse: separate
-    border-spacing: 0
-    border: 1px solid #dde4ee
-    td, th
-      text-align: left
-    thead
-      tr
-        &:first-child
-          th
-            border-top: none
-            &:first-child
-              border-top-left-radius: 5px
-            &:last-child
-              border-top-right-radius: 5px
-              border-right: none
-    tbody
-      tr
-        &:last-child
-          td
-            border-bottom: none
 .label-drop
   display: inline-block
   height: 24px
@@ -285,33 +162,3 @@ table.data-grid
       padding: 5px 4px 0 0
       display: inline-block
 
-/* Supports loading overlay */
-.loading
-  .bd
-    position: relative
-    &::before, &::after
-      content: ''
-      position: absolute
-      z-index: 1
-    &::before
-      top: 0
-      left: 0
-      bottom: 0
-      right: 0
-      background: rgba(255,255,255,0.6)
-    &::after
-      content: ''
-      width: 32px
-      height: 32px
-      background: image-url("shared/ajax-loader.gif") 0 0 no-repeat
-      left: 50%
-      top: 50%
-      margin-top: -32px * .5
-      margin-left: -32px * .5
-
-btn.active
-  border: 1px solid #b5c9e1
-  background: #d4dfed
-  box-shadow: inset 0 3px 5px #b5c7dc, 0 1px 0 white
-  color: #5d93d5
-  border: none

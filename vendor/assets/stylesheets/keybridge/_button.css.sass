@@ -1,0 +1,371 @@
+@import compass/css3/box-shadow
+@import compass/css3/user-interface
+@import compass/css3/images
+@import keybridge/theme
+@import keybridge/shared/*.png
+
+.btn:hover
+  color: #769ad1
+.btn,
+.btn:link,
+.btn:visited
+  color: #a6bedc
+.btn:hover
+  color: #769ad1 !important
+.btn-primary,
+.btn-info
+  color: #fff !important
+.btn-primary:hover,
+.btn-info:hover
+  color: #fff !important
+
+.btn
+  +user-select(none)
+  position: relative
+  display: inline-block
+  padding: 7px 10px
+  padding: 2px 5px 3px 5px\0
+  background: #E5ECF4
+  background: image-url("pages-selector-btn-bg.png") top left repeat-x\0
+  +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+  +box-shadow( inset 0 0 1px #fff, inset 0 1px 0 #fff )
+  border: 1px solid #bed0e6
+  border-top: 1px solid #bdcfe5
+  border-bottom: 1px solid #a6bedd
+  border-radius: 4px
+  color: #a6bedc
+  font-size: 12px
+  line-height: 1em
+  text-shadow: 0 1px 0 #fff
+  margin: 0 5px 0 0
+  &:hover
+    background: #DCE5F1
+    +background-image(linear-gradient(top, #e4eaf2, #dce5f1))
+    color: #bdcfe5
+    border: 1px solid #BDCFE5
+  &.mini
+    padding: 0px 5px
+  &.num
+    margin-bottom: 8px
+    padding: 0 8px
+    span
+      display: inline-block
+      padding: 4px 5px
+      color: #88A6D6
+      &:first-child
+        padding-left: 0
+      &:last-child
+        padding-right: 0
+      &.num
+        color: #ABC1DC
+        border-left: 1px solid #B8CBE2
+        +box-shadow(inset 1px 0 0 rgba(white, 0.5))
+  &.filter-btn
+    &:hover
+      border: 1px solid #3682E1
+      color: #3682E1
+      +box-shadow(0 0 2px #4692F1)
+      +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+      span
+        color: #3682E1
+      span.num
+        border-left: 1px solid #3682E1
+
+  &:last-child
+    margin-right: 0
+  &.btn-icon
+    padding: 4px
+    span
+      display: inline-block
+      vertical-align: middle
+      padding: 0 4px
+  &.btn-icon-text
+    padding: 4px 10px
+  span
+    padding-top: 3px
+    padding-bottom: 3px
+    line-height: 1em
+  i, .icon
+    display: inline-block
+    vertical-align: middle
+    width: 16px
+    height: 16px
+  &.btn-shadow
+    +box-shadow(inset 0 0 1px white, inset 0 1px 0 white, 0 1px 2px rgba(#a7bedb, 0.5))
+    &:active
+      +box-shadow(inset 0 2px 3px rgba(#B6C7DC, 0.6), 0 1px 0 #fff)
+  &.btn-primary
+    background: #4F91FA
+    +background-image(linear-gradient(top, #4F91FA, #2a73e8))
+    +box-shadow(inset 0 1px 0 rgba(white, 0.3))
+    border: 1px solid #3179EF
+    color: #fff
+    text-shadow: 0 -1px 0 #1A3767
+    &:hover
+      background: #4F91FA
+      +background-image(linear-gradient(top, #2a73e8, #0063cc))
+      color: #fff
+    &:active
+      background: #4F91FA
+      +box-shadow(inset 0 2px 5px rgba(black, 0.3))
+      +background-image(linear-gradient(top, #2a73e8, #0063cc))
+      color: #fff
+    &.btn-shadow
+      +box-shadow(inset 0 0 1px (#fff, 0.3), inset 0 1px 0 (#fff, 0.3), 0 1px 2px rgba(#a7bedb, 0.5))
+      &:active
+        +box-shadow(inset 0 2px 3px rgba(#B6C7DC, 0.6), 0 1px 0 (#fff, 0.3))
+  &.btn-danger
+    color: #fff
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
+    background: #da4f49
+    background-color: #da4f49
+    *background-color: #bd362f
+    +background-image(linear-gradient(to bottom, #ee5f5b, #bd362f))
+    background-repeat: repeat-x
+    border-color: #bd362f #bd362f #802420
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
+    +box-shadow(inset 0 1px 0 rgba(white, 0.3))
+    &:hover
+      color: #fff !important
+      +background-image(linear-gradient(to bottom, #fe6f6b, #cd564f))
+    &:active
+      color: #fdc9c7
+      background-color: #da4f49
+      +background-image(linear-gradient(to bottom, #ee5f5b, #bd362f))
+      +box-shadow( inset 0 2px 5px rgba(#000, 0.2), inset 0 1px 2px rgba(#000, 0.2), 0 1px 0 #fff)
+    &:link, &:visited
+      color: #fff
+  &.btn-small
+    display: inline-block
+    vertical-align: middle
+    padding: 6px 10px
+  &:active, &.active
+    background: #DCE5F1
+    +background-image(linear-gradient(top, #cad9eb, #dbe5f1))
+    color: #5D90cD
+    border: 1px solid #B7C8DD
+    border-top: 1px solid #B7C8DD
+    +box-shadow(inset 0 2px 3px rgba(#B6C7DC, 0.6), 0 1px 0 rgba(#fff, 0.5))
+  &.btn-back-product
+    position: relative
+    border: 1px solid #143976
+    border-bottom: 1px solid #3e639e
+    padding: 6px 10px 6px 5px
+    text-shadow: 0 -1px 0 #14366e
+    +box-shadow( inset 0 -1px 0 #14366e, inset 0 1px 0 #6b8fc9)
+    +background(linear-gradient(top, #4368a4, #234785, #1c407d))
+    &:before
+      content: ''
+      position: absolute
+      left: -15px
+      top: -1px
+      width: 18px
+      height: 30px
+      +shared-sprite(btn-back-product)
+    &:hover
+      border: 1px solid #204279
+      border-bottom: 1px solid #3e639e
+      +background(linear-gradient(top, #4c70a9, #30538d, #264983))
+      &:before
+        +shared-sprite(btn-back-product-hover)
+    &:active
+      border: 1px solid #204279
+      border-top: 1px solid rgba(#204279, 0)
+      border-bottom: 1px solid #3e639e
+      +box-shadow(inset 0 1px 3px #102c59)
+      +background(linear-gradient(top, #183c79, #183c79, #183c79))
+      &:before
+        +shared-sprite(btn-back-product-active)
+
+
+.shadow
+  +box-shadow(inset 0 0 1px white, inset 0 1px 0 white, 0 1px 2px rgba(#a7bedb, 0.5))
+
+.btn-tag
+  @extend .shadow
+  +user-select(none)
+  cursor: pointer
+  position: relative
+  display: inline-block
+  border-radius: 4px
+  color: #a6bedc
+  font-size: 12px
+  line-height: 1em
+  text-shadow: 0 1px 0 #fff
+  vertical-align: top
+  padding: 6px 10px
+  padding-left: 5px
+  margin-left: 10px
+  margin-right: 5px
+  border: 1px solid #bed0e6
+  border-bottom: 1px solid #a6bedd
+  +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+  +box-shadow(inset 0 0 1px white, inset 0 1px 0 white, 0 1px 2px rgba(#a7bedb, 0.5))
+  &:before
+    content: ''
+    position: absolute
+    left: -11px
+    top: 50%
+    padding: 0
+    margin-top: -14px
+    display: inline-block
+    vertical-align: middle
+    width: 14px
+    height: 28px
+    +shared-sprite(icon-tags)
+  &:hover
+    border-bottom: 1px solid #a6bedd
+    color: #5D90cD
+    +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+  &.active, &:active
+    +background-image(linear-gradient(top, #ccdaec, #dbe5f1))
+    border-top: 1px solid #a0b4cf
+    border-bottom: 1px solid #d3deec
+    +box-shadow(inset 0 1px 1px #b6c6dd, 0 1px 0 #fff)
+    &:before
+      +shared-sprite(icon-tags-active)
+
+.btn-tag-mini
+  +user-select(none)
+  cursor: pointer
+  position: relative
+  display: inline-block
+  height: 10px
+  border-radius: 4px
+  color: #a6bedc
+  font-size: 12px
+  line-height: 11px
+  text-shadow: 0 1px 0 #fff
+  vertical-align: top
+  padding: 4px 10px
+  padding-left: 8px
+  margin-left: 5px
+  margin-right: 5px
+  margin-bottom: 8px
+  border: 1px solid #bed0e6
+  border-bottom: 1px solid #a6bedd
+  +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+  +box-shadow(inset 0 0 1px white, inset 0 1px 0 white, 0 1px 2px rgba(#a7bedb, 0.5))
+  &:before
+    content: ''
+    position: absolute
+    left: -11px
+    top: 50%
+    margin-top: -11px
+    display: inline-block
+    vertical-align: middle
+    width: 15px
+    height: 22px
+    +shared-sprite(icon-tags-mini)
+  &:hover
+    border: 1px solid #3682E1
+    color: #3682E1
+    +box-shadow(0 0 2px #4692F1)
+    +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+    &:before
+      +shared-sprite(icon-tags-mini-hover)
+  &.active, &:active
+    +background-image(linear-gradient(top, #ccdaec, #dbe5f1))
+    border-top: 1px solid #a1b4cf
+    border-bottom: 1px solid #d2deec
+    +box-shadow(inset 0 1px 1px #b6c6dd, 0 1px 0 #fff)
+    &:before
+      +shared-sprite(icon-tags-mini-toggle)
+
+.btn-arrow
+  padding: 6px 10px
+  margin: 0 5px 0 20px
+  position: relative
+  i.arrow
+    width: 25px
+    height: 27px
+    position: absolute
+    right: -18px
+    top: -1px
+    +shared-sprite(btn-arrow-right)
+  &:before
+    content: ''
+    width: 23px
+    height: 27px
+    position: absolute
+    left: -18px
+    top: -1px
+    +shared-sprite(btn-arrow-left)
+  &:hover
+    i.arrow
+      +shared-sprite(btn-arrow-right-hover)
+    &:before
+      content: ''
+      +shared-sprite(btn-arrow-left-hover)
+  &:active, &.active
+    border-bottom: 1px solid #d4dfed
+    border-top: 1px solid #a4b7d2
+    +box-shadow( inset 0 1px 2px rgba(#b4c7de, 0.9), 0 1px 0 #fff)
+    i.arrow
+      +shared-sprite(btn-arrow-right-active)
+    &:before
+      content: ''
+      +shared-sprite(btn-arrow-left-active)
+
+.btn-back
+  vertical-align: top
+  height: 26px
+  margin-left: 10px
+  margin-right: 5px
+  padding: 4px 10px 4px 0px
+  box-sizing: border-box
+  border: 1px solid #bed0e6
+  border-bottom: 1px solid #a6bedd
+  color: #a7bedb
+  +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+  +box-shadow(inset 0 0 1px white, inset 0 1px 0 white, 0 1px 2px rgba(#a7bedb, 0.5))
+  i
+    display: inline-block
+    font-size: 14px
+  &:before
+    content: ''
+    position: absolute
+    left: -11px
+    top: 50%
+    margin-top: -14px
+    display: inline-block
+    vertical-align: middle
+    width: 14px
+    height: 28px
+    +shared-sprite(icon-tags-back)
+  &:hover
+    border-bottom: 1px solid #a6bedd
+    +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+  &.active, &:active
+    +background-image(linear-gradient(top, #ccdaec, #dbe5f1))
+    border-top: 1px solid #a0b4cf
+    border-bottom: 1px solid #d3deec
+    +box-shadow( inset 0 1px 1px #b6c6dd, 0 1px 0 #fff )
+    &:before
+      +shared-sprite(icon-tags-back-active)
+
+.btn-group > .btn
+  margin-right: 0
+  font-size: 12px
+
+.btn
+  border: 1px solid #b5c9e1
+  &:focus
+    outline: 0
+  &:hover
+    border: 1px solid #3284eb
+    color: #3284eb !important
+    span
+      color: #3284eb
+    span.num
+      color: #3284eb
+    +background-image(linear-gradient(top, #f1f5f9, #dbe5f1))
+  &:active, &.active
+    border: 1px solid #b5c9e1
+    background: #d4dfed
+    +box-shadow( inset 0 3px 5px #b5c7dc, 0 1px 0 #fff )
+    color: #5d93d5
+
+.btn-primary
+  &:hover
+    color: #fff !important

@@ -9,7 +9,7 @@
 .bar
   position: relative
   text-align: left
-  padding: 5px 10px
+  padding: 7px 10px 5px
   box-sizing: border-box
   min-height: 40px
   +background-image(linear-gradient(top, white, #e9eff6))
@@ -44,6 +44,7 @@
     .title
       height: 20px
   &.bar-shadow
+    position: relative
     &:before
       content: ""
       position: absolute
@@ -90,4 +91,53 @@
         height: 100%
         display: inline-block
         vertical-align: middle
+
+.bar
+  position: relative
+  text-align: left
+  +background-image(linear-gradient(top, white, #e9eff6))
+  background: image-url("ie-bg/bg-primary-header.png") bottom left repeat-x\0
+  border-bottom: 1px solid #BDCFE5
+  border-top: 1px solid #dde4ee
+  margin-top: -1px
+  h3
+    display: inline-block
+    margin: 0
+    line-height: 1em
+    color: #5579B2
+    text-shadow: 0 1px 0 #fff
+  &.small
+    padding: 5px 20px
+  .pull-left
+    >*
+      vertical-align: middle
+
+.bar-shadow
+  position: relative
+  text-align: left
+  padding: 10px 20px
+  +background-image(linear-gradient(top, white, #e9eff6))
+  background: image-url("ie-bg/bg-primary-header.png") bottom left repeat-x\0
+  border-bottom: 1px solid #BDCFE5
+  border-top: 1px solid #dde4ee
+  margin-top: -1px
+  &:before
+    content: ""
+    position: absolute
+    top: 100%
+    left: 0
+    right: 0
+    height: 6px
+    +background-image(linear-gradient(top, rgba(#dbe2ed, 1), rgba(#dbe2ed, 0)))
+  h3
+    display: inline-block
+    margin: 0
+    line-height: 1em
+    color: #5579B2
+    text-shadow: 0 1px 0 #fff
+  &.small
+    padding: 5px 20px
+  .pull-left
+    >*
+      vertical-align: middle
 
