@@ -36,9 +36,14 @@
 .table-striped > tbody > tr:nth-child(odd)
   background: #fcfcfc
 
+.table-striped > tbody > tr.active > th,
+.table-striped > tbody > tr.active > td
+  background: transparent
+
 .table-striped > tbody > tr:hover
   background: #f3f8fd
 
+.table-striped > tbody > tr.active:nth-child(odd),
 .table-striped > tbody > tr.active
   background: #ebf3fd
 
