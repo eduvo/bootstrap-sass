@@ -1,7 +1,7 @@
 ###
 Usage:
 
-1. Requires this module, "utils/form_validate".
+1. Requires this module, "keybridge/form_validate".
 2. Add `data-validate="true"` attribute to the specific form tag.
 ###
 define (require) ->

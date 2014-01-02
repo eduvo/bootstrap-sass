@@ -1,7 +1,7 @@
 define (require) ->
-  require 'utils/fancyselect.jquery'
-  require 'utils/rmspacing'
-  require 'utils/urlpath'
+  require 'keybridge/fancyselect.jquery'
+  require 'keybridge/rmspacing'
+  require 'keybridge/urlpath'
   class Pagination
     # Private
     _get = (url, params, callback) ->

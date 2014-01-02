@@ -6,8 +6,8 @@
 define (require)->
   require 'jquery.currency'
 
-  UrlPath = require 'utils/urlpath'
-  Pagination = require 'utils/kb.pagination'
+  UrlPath = require 'keybridge/urlpath'
+  Pagination = require 'keybridge/kb.pagination'
   ColumnStatements = require 'contact/shared/columns_statements'
   TableViewTemplate = require 'contact/shared/tableview.tpl'
 

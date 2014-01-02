@@ -1,6 +1,6 @@
 define (require) ->
   require 'bootstrap-datepicker'
-  require 'utils/fancyselect.jquery'
+  require 'keybridge/fancyselect.jquery'
   class EmbedTimePicker
     SET_WITHOUT_TIME = 'DD MMM YYYY [00:00:00]'
     SET_WITH_TIME    = 'DD MMM YYYY hh:mm a'

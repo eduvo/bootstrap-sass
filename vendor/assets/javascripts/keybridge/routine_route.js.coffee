@@ -1,6 +1,6 @@
 define (require) ->
   $window = $(window)
-  UrlPath = require 'utils/urlpath'
+  UrlPath = require 'keybridge/urlpath'
   class RoutineRoute
     eventName: "RR:route"
     path: ''

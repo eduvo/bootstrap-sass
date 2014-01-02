@@ -3,8 +3,8 @@
 #  -------
 #  JavaScript
 #
-#    require(['utils/cascade'], function () {
-#       // You don't have to invoke anything, just include the `utils/cascade` module.
+#    require(['keybridge/cascade'], function () {
+#       // You don't have to invoke anything, just include the `keybridge/cascade` module.
 #    })
 #
 #  HTML

@@ -3,8 +3,8 @@
 #  -------
 #  JavaScript
 #
-#    require(['utils/checkall'], function () {
-#       // You don't have to invoke anything, just include the `utils/checkall` module.
+#    require(['keybridge/checkall'], function () {
+#       // You don't have to invoke anything, just include the `keybridge/checkall` module.
 #    })
 #
 #  HTML

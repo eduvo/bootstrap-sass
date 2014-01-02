@@ -1,5 +1,5 @@
 define (require) ->
-  require 'utils/rmspacing'
+  require 'keybridge/rmspacing'
 
   $('.textarea-auto, .inline-blocks').removeInlineBlockSpacing()
   $.fn.switchClick = (options) ->

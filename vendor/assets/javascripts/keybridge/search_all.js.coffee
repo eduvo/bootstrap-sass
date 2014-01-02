@@ -1,6 +1,6 @@
 # Search anything
 define (require) ->
-  _determineKeyAction = require 'utils/search_navigation'
+  _determineKeyAction = require 'keybridge/search_navigation'
 
   $parent = $('#title-bar')
   $mainContainer = $parent.find('#search-result')
