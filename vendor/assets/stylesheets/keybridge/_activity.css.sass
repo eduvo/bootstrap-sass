@@ -1,0 +1,194 @@
+@import compass/css3/box-shadow
+@import compass/css3/border-radius
+@import compass/css3/user-interface
+@import compass/css3/images
+@import compass/css3/transition
+@import compass/css3/transform
+@import compass/utilities/sprites
+@import keybridge/icons/activity/*.png
+@import dashboard/*.png
+
+/* Individual activity item */
+.activity
+  display: table
+  width: 100%
+  position: relative
+  margin-bottom: 10px
+  text-shadow: 0 1px 0 #fff
+  line-height: 1.4
+
+  /* Range Line */
+  &:before
+    position: absolute
+    content: ''
+    width: 3px
+    top: 47px
+    left: 19px
+    bottom: -3px
+    background: #ebeef3
+    +box-shadow(inset 1px 1px 0 #dbe1ed, 0 1px 0 #fff)
+    +border-radius(3px)
+
+  /* Layout for an activity item */
+  > .cell
+    display: table-cell
+    padding-bottom: 10px
+    border-bottom: dotted 1px #ccc
+    vertical-align: top
+    min-height: 40px
+    padding-top: 3px
+
+  /* 1st cell: Activity type */
+  > .type
+    padding: 0 20px 0 0
+    border: none
+    width: 40px
+    .icon
+      display: block
+      width: 40px
+      height: 40px
+      position: relative
+      background: #a4bbdb
+      +box-shadow(inset 0 2px 2px rgba(#000, 0.1), inset 0 0 2px rgba(#000, 0.1), 0 1px 0 #fff)
+      +border-radius(20px)
+      &:before
+        content: ''
+        width: 30px
+        height: 30px
+        position: absolute
+        left: 7px
+        top: 5px
+        overflow: hidden
+        +activity-sprite(default)
+
+  /* 2nd cell: Activity content */
+  > .content
+    padding-bottom: 5px
+    +user-select(text)
+    max-width: 500px
+    overflow: hidden
+    text-overflow: ellipsis
+    img
+      +border-radius(4px)
+      max-height: 30px
+    .message p img
+      margin-bottom: 4px
+    .due-date
+      color: red
+    .product
+      font-weight: bold
+    .title
+      margin-bottom: 8px
+      font-weight: bold
+      em
+        font-style: normal
+    .attachments
+      margin: 8px 0
+    .message
+      > p
+        line-height: 1.5
+
+  /* 3rd cell: User creating this activity */
+  > .user
+    min-width: 125px
+    text-align: right
+    .name
+      margin-bottom: 4px
+    .created-at
+      margin-top: 6px
+      line-height: 1.4
+      color: #a7bedd
+      text-align: right
+      margin-bottom: 25px
+  .tasks
+    visibility: hidden
+    &:hover
+      visibility: visible
+    .btn
+      padding: 2px
+      margin-right: 0
+      margin-left: 3px
+      span
+        display: inline-block
+        overflow: hidden
+        width: 16px
+        height: 16px
+        padding: 0
+
+/* Style for Different Activity */
+.activity
+  &.activity-comment-created
+    .summary p
+      margin-right: 35px
+    > .type .icon
+      background: #8a91de
+      &:before
+        left: 6px
+        top: 6px
+        +activity-sprite(comment_created)
+  &.activity-credit-note-outstanding
+    > .type .icon
+      background: #f44b48
+      &:before
+        left: 6px
+        top: 3px
+        +activity-sprite(credit_note)
+  &.activity-invoice-outstanding
+    > .type .icon
+      background: #f5bb72
+      &:before
+        left: 6px
+        +activity-sprite(invoice_outstanding)
+  &.activity-invoice-paid
+    > .type .icon
+      background: #8acd86
+      &:before
+        left: 5px
+        top: 6px
+        +activity-sprite(invoice_paid)
+  &.activity-recording-email-draft,
+    .summary p
+      margin-right: 35px
+    > .type .icon
+      &:before
+        left: 6px
+        top: 6px
+        +activity-sprite(recording_email_sent)
+  &.activity-recording-email-sent
+    > .type .icon
+      background: #8ac2f5
+      &:before
+        left: 6px
+        top: 6px
+        +activity-sprite(recording_email_sent)
+  &.activity-recording-file-created
+    > .type .icon
+      background: #b58ad9
+      &:before
+        left: 6px
+        top: 6px
+        +activity-sprite(recording_file_created)
+  &.activity-recording-note-sent
+    .summary p
+      margin-right: 35px
+    > .type .icon
+      background: #f4d664
+      &:before
+        left: 7px
+        top: 7px
+        +activity-sprite(recording_note_sent)
+  &.activity-task-completed
+    > .type .icon
+      background: #67cb8e
+      &:before
+        top: 5px
+        left: 9px
+        +activity-sprite(task_completed)
+  &.activity-task-created,
+  &.activity-task-updated,
+  &.activity-task-assigned
+    > .type .icon
+      background: #f7ba84
+      &:before
+        +activity-sprite(task_assigned)
+
