@@ -1,0 +1,134 @@
+@import compass/utilities/sprites/base
+@import compass/utilities/sprites
+@import keybridge/icon/small/*.png
+@import keybridge/icon/large/*.png
+@import keybridge/icon/plain/*.png
+
+// Define:
+  .kbp - plain:  monotone, 25-
+  .kbs - small:  24px-
+  .kbm - medium: 25~49px
+  .kbl - large:  50px+
+
+// Plain Icons
+.kbp
+  display: inline-block
+  width: 16px
+  height: 16px
+  &.kbp-push
+    +plain-sprite(icon_push)
+  &.kbp-follow
+    +plain-sprite(icon_follow)
+  &.kbp-move
+    width: 16px
+    height: 16px
+    +plain-sprite(icon_move)
+
+// Small Icons
+.kbs
+  display: inline-block
+  width: 16px
+  height: 16px
+  vertical-align: middle
+  &.kbs-lock
+    +small-sprite(lock)
+  &.kbs-unlock
+    +small-sprite(unlock)
+  &.kbs-key
+    +small-sprite(key)
+  &.kbs-male
+    width: 10px
+    +small-sprite(male)
+  &.kbs-female
+    width: 10px
+    +small-sprite(female)
+
+// Large Icons
+.kbl
+  display: inline-block
+  width: 50px
+  height: 50px
+  vertical-align: middle
+  &.kbl-email
+    +large-sprite(tab-email)
+  &.kbl-file
+    +large-sprite(tab-file)
+  &.kbl-note
+    +large-sprite(tab-note)
+  &.kbl-call
+    +large-sprite(tab-call)
+
+// Uncategorized
+// .kbicon
+//   &.kbicon-active
+//     width: 16px
+//     height: 17px
+//     +icons-sprite(icon_active)
+//   &.kbicon-cup
+//     width: 16px
+//     height: 16px
+//     +icons-sprite(icon_cup)
+//   &.kbicon-export
+//     width: 15px
+//     height: 14px
+//     +icons-sprite(icon_export)
+//   &.kbicon-table
+//     width: 17px
+//     height: 14px
+//     +icons-sprite(icon_table)
+//   &.kbicon-tel
+//     width: 16px
+//     height: 12px
+//     +icons-sprite(icon_tel)
+//   &.kbicon-cal
+//     width: 16px
+//     height: 17px
+//     +icons-sprite(icon_cal)
+//   &.kbicon-location
+//     width: 11px
+//     height: 16px
+//     +icons-sprite(icon_location)
+//   &.kbicon-card
+//     width: 18px
+//     height: 18px
+//     +icons-sprite(icon_card)
+//   &.kbicon-mail,
+//   &.kbicon-email
+//     width: 15px
+//     height: 11px
+//     +icons-sprite(icon_email)
+//   &.kbicon-oa
+//     width: 17px
+//     height: 19px
+//     +icons-sprite(icon_oa)
+//   &.kbicon-reports
+//     width: 18px
+//     height: 18px
+//     +icons-sprite(icon_reports)
+//   &.kbicon-key
+//     width: 17px
+//     height: 17px
+//     +icons-sprite(icon_key)
+//   &.kbicon-key-smaller
+//     width: 16px
+//     height: 16px
+//     +icons-sprite(icon_key_smaller)
+//   &.kbicon-pen
+//     width: 16px
+//     height: 16px
+//     +icons-sprite(icon_pen)
+//     &:active, &:focus
+//       +icons-sprite(icon_pen_active)
+// .kbicon
+//   &.kbicon-product-oa
+//     width: 40px
+//     height: 40px
+//     +product-sprite(icon_oa_small)
+//   &.kbicon-product-mb
+//     width: 40px
+//     height: 40px
+//     +product-sprite(icon_mb_small)
+//   &.kbicon-product-device
+//     width: 40px
+//     height: 40px
+//     +product-sprite(icon_device_small)
