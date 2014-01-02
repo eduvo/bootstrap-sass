@@ -4,7 +4,6 @@
 @import compass/css3/transition
 @import compass/utilities/sprites
 @import keybridge/theme
-@import keybridge/header/*.png
 @import keybridge/shared/*.png
 $search-result-width: 400px
 
@@ -96,7 +95,7 @@ $search-result-width: 400px
       bottom: 100%
       right: 50%
       margin-right: -7px
-      +shared-sprite(arrow-dropdown)
+      +shared-sprite(arrow_dropdown)
       width: 15px
       height: 8px
     >li
@@ -157,19 +156,8 @@ $search-result-width: 400px
       &.second
         background: #EAEEF4
         a
-          padding-left: 40px
+          padding-left: 13px
           position: relative
-          &:after
-            content: ""
-            position: absolute
-            top: 13px
-            left: 20px
-            width: 16px
-            height: 16px
-            +header-sprite(arrow-bottom-right)
-          &:hover
-            &:after
-              +header-sprite(arrow-bottom-right-active)
       &:first-child
         border-radius: 5px 5px 0 0
         margin: 0
@@ -193,6 +181,8 @@ $search-result-width: 400px
     vertical-align: middle
     padding: 0 15px
     color: #5579B2
+  i
+    margin-right: 3px
   > a.column
     &:before
       content: ''
@@ -202,7 +192,7 @@ $search-result-width: 400px
       height: 11px
       top: 50%
       margin-top: -5px
-      +header-sprite(dashed)
+      +shared-sprite(dashed)
 
     &:last-child
       background: none
@@ -409,7 +399,7 @@ $search-result-width: 400px
         width: 11px
         margin-left: -5px
         height: 9px
-        +shared-sprite(date-picker-top)
+        +shared-sprite(arrow_dropdown_top)
     .bd
       background: #EAEEF5
       border: 1px solid #BECFE5
@@ -505,7 +495,6 @@ $search-result-width: 400px
       height: 11px
       vertical-align: middle
       margin-right: 3px
-      +header-sprite(backto)
   #date
     color: #fff
     font-size: 15px
@@ -520,9 +509,3 @@ $search-result-width: 400px
     display: inline-block
     vertical-align: middle
 
-.setting-email
-  +shared-sprite(setting-email)
-.setting-help
-  +shared-sprite(setting-help)
-.setting-tools
-  +shared-sprite(setting-tools)

@@ -1,134 +1,89 @@
 @import compass/utilities/sprites/base
 @import compass/utilities/sprites
+@import keybridge/icon/plain/*.png
 @import keybridge/icon/small/*.png
 @import keybridge/icon/large/*.png
-@import keybridge/icon/plain/*.png
 
-// Define:
-  .kbp - plain:  monotone, 25-
-  .kbs - small:  24px-
-  .kbm - medium: 25~49px
-  .kbl - large:  50px+
-
-// Plain Icons
-.kbp
-  display: inline-block
-  width: 16px
-  height: 16px
-  &.kbp-push
-    +plain-sprite(icon_push)
-  &.kbp-follow
-    +plain-sprite(icon_follow)
-  &.kbp-move
-    width: 16px
-    height: 16px
-    +plain-sprite(icon_move)
-
-// Small Icons
-.kbs
-  display: inline-block
-  width: 16px
-  height: 16px
-  vertical-align: middle
-  &.kbs-lock
-    +small-sprite(lock)
-  &.kbs-unlock
-    +small-sprite(unlock)
-  &.kbs-key
-    +small-sprite(key)
-  &.kbs-male
-    width: 10px
-    +small-sprite(male)
-  &.kbs-female
-    width: 10px
-    +small-sprite(female)
+@function to-string($list, $glue: '')
+  $result: null
+  @for $i from 1 through length($list)
+    $e: nth($list, $i)
+    $result: if($i != length($list), $result#{$e}#{$glue}, $result#{$e})
+  @return $result
 
 // Large Icons
+// .kbl - large:  40px+
+$large-icons: add_contact, add_email, agreement, call, devices, email, file, highrise, import_excel, managebac, note, openapply, salesforce, tips
 .kbl
   display: inline-block
   width: 50px
   height: 50px
   vertical-align: middle
-  &.kbl-email
-    +large-sprite(tab-email)
-  &.kbl-file
-    +large-sprite(tab-file)
-  &.kbl-note
-    +large-sprite(tab-note)
-  &.kbl-call
-    +large-sprite(tab-call)
+  @each $icon in $large-icons
+    &.kbl-#{$icon}
+      +large-sprite(#{$icon})
 
-// Uncategorized
-// .kbicon
-//   &.kbicon-active
-//     width: 16px
-//     height: 17px
-//     +icons-sprite(icon_active)
-//   &.kbicon-cup
-//     width: 16px
-//     height: 16px
-//     +icons-sprite(icon_cup)
-//   &.kbicon-export
-//     width: 15px
-//     height: 14px
-//     +icons-sprite(icon_export)
-//   &.kbicon-table
-//     width: 17px
-//     height: 14px
-//     +icons-sprite(icon_table)
-//   &.kbicon-tel
-//     width: 16px
-//     height: 12px
-//     +icons-sprite(icon_tel)
-//   &.kbicon-cal
-//     width: 16px
-//     height: 17px
-//     +icons-sprite(icon_cal)
-//   &.kbicon-location
-//     width: 11px
-//     height: 16px
-//     +icons-sprite(icon_location)
-//   &.kbicon-card
-//     width: 18px
-//     height: 18px
-//     +icons-sprite(icon_card)
-//   &.kbicon-mail,
-//   &.kbicon-email
-//     width: 15px
-//     height: 11px
-//     +icons-sprite(icon_email)
-//   &.kbicon-oa
-//     width: 17px
-//     height: 19px
-//     +icons-sprite(icon_oa)
-//   &.kbicon-reports
-//     width: 18px
-//     height: 18px
-//     +icons-sprite(icon_reports)
-//   &.kbicon-key
-//     width: 17px
-//     height: 17px
-//     +icons-sprite(icon_key)
-//   &.kbicon-key-smaller
-//     width: 16px
-//     height: 16px
-//     +icons-sprite(icon_key_smaller)
-//   &.kbicon-pen
-//     width: 16px
-//     height: 16px
-//     +icons-sprite(icon_pen)
-//     &:active, &:focus
-//       +icons-sprite(icon_pen_active)
-// .kbicon
-//   &.kbicon-product-oa
-//     width: 40px
-//     height: 40px
-//     +product-sprite(icon_oa_small)
-//   &.kbicon-product-mb
-//     width: 40px
-//     height: 40px
-//     +product-sprite(icon_mb_small)
-//   &.kbicon-product-device
-//     width: 40px
-//     height: 40px
-//     +product-sprite(icon_device_small)
+// Define:
+  .kbm - medium: 25~49px
+
+//.kbp - plain:  monotone, 25-
+// Plain Icons
+$plain-icons: active, books, calendar, calendar2, calendar3, card, classes, clock, comment, cup, dollar, envelope, export, female, filter, follow, info, key, line chart, location, lock, lock active, log active, long arrow left, long arrow right, mail, mail forward, mail reply, mail reply all, male, merge, move, openapply, paper clip, pen active, pen, preferences, print, push right, push up, reports, sub, sub_active, table, tel, trash, vcard, watch
+.kbp
+  display: inline-block
+  width: 16px
+  height: 16px
+  vertical-align: middle
+  @for $i from 1 through length($plain-icons)
+    $name: nth($plain-icons, $i)
+    $dashed: to-string($name, "-")
+    $underscore: to-string($name, "_")
+    &.kbp-#{$dashed}
+      +plain-sprite(#{$underscore})
+  &.kbp-active
+    height: 17px
+  &.kbp-export
+    height: 15px
+  &.kbp-table
+    width: 17px
+    height: 14px
+  &.kbp-tel
+    height: 12px
+  &.kbp-calendar
+    height: 17px
+  &.kbp-location
+    width: 11px
+  &.kbp-card
+    width: 18px
+    height: 18px
+  &.kbp-mail,
+  &.kbp-email
+    width: 15px
+    height: 11px
+    +plain-sprite(mail)
+  &.kbp-openapply
+    width: 17px
+    height: 19px
+  &.kbp-reports
+    width: 18px
+    height: 18px
+  &.kbp-key
+    width: 17px
+  &.kbp-pen
+    &:active, &:focus
+      +plain-sprite(pen_active)
+
+// Small Icons
+// .kbs - small:  24px-
+$small-icons: academics, attendance, back, building, call active, call multi, call single, call, chart, check, checklist, cup, doc, email forward, email, female, folder active, folder, help, invoice, isis, journal, key, keybridge, lock, mail active, mail, male, managebac, note active, note, openapply, overview, person alumni, person applicant, person manager, person parents, person student, person, receipt, reconciliation, sign active, sign, tools, unlock, xero
+.kbs
+  display: inline-block
+  width: 16px
+  height: 16px
+  vertical-align: middle
+  @for $i from 1 through length($small-icons)
+    $name: nth($small-icons, $i)
+    $dashed: to-string($name, "-")
+    $underscore: to-string($name, "_")
+    &.kbs-#{$dashed}
+      +small-sprite(#{$underscore})
